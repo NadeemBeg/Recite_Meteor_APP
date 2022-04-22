@@ -1,0 +1,90 @@
+<template name="notifications">
+	<div class="notifications">
+		<div class="row">
+			<div class="col-xs-3 text-center nopadding">
+				<div class="backbuttontopnav">
+	                <img src="/img/verify-account-part-2-arrowright-336@2x.png" class="arrowright336"/>
+	            </div>
+			</div>
+			<div class="col-xs-6 text-center">
+				<div class="namecase1">
+                    Notifications
+                </div>
+			</div>
+			<div class="col-xs-3 text-center">
+				{{#if getNotificationList.notificationUnReadListCount}}
+					<div class="more notificationSettings">
+		                <div class="layer1">
+		                    <img src="/img/More.png" class="shape"/>
+		                </div>
+		            </div>
+				{{else}}
+					&nbsp;
+				{{/if}}
+				
+			</div>
+		</div>
+		{{#with getNotificationList}}
+			{{#if this.hasNotification}}
+				{{#if this.notificationUnReadListCount}}
+						<div class="row">
+							<div class="col-xs-12 ">
+								<div class="unread">
+					                Unread
+					            </div>
+							</div>
+							{{#each this.notificationUnReadList}}
+									<div class="col-xs-12 record">
+										<div class="recordLeftIcon" style="padding-top: 15px;">
+											{{{getProfilePic this.fromUserId}}}
+										</div>
+										<div class="recordRightText" style="padding-left: 0;">
+											{{{getMessage this.fromUserId}}}
+									        {{{getNotificationBody1 this}}}
+										</div>
+										<div class="col-xs-12 text-center">
+											<div class="a20minutesago">
+								                {{getNotificationTime this}}
+								            </div>
+										</div>
+									</div>
+							{{/each}}
+						</div>
+				{{/if}}
+				{{#if this.notificationReadList}}
+					{{#if this.notificationReadListCount}}
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="unread">
+						                Read
+						            </div>
+								</div>
+								{{#each this.notificationReadList}}
+										<div class="col-xs-12 record ">
+											<div class="recordLeftIcon" style="padding-top: 15px;">
+												{{{getProfilePic this.fromUserId}}}
+											</div>
+											<div class="recordRightText" style="padding-left: 0;">
+												{{{getMessage this.fromUserId}}}									
+									            <div class="rectangle2">
+										            {{{getNotificationBody1 this}}}
+										            <!-- <img src="/img/notifications-arrowright-336-2@2x.png" class="arrowright336" /> -->
+								            	</div>
+								            	
+											</div>
+											<div class="col-xs-12 text-center">
+												<div class="a20minutesago">
+									                {{getNotificationTime this}}
+									            </div>
+											</div>
+										</div>
+								{{/each}}
+							</div>
+					{{/if}}
+				{{/if}}
+			{{else}}
+				<b><center>No notifications yet.</center></b>
+			{{/if}}
+		{{/with}}
+	</div>
+</template>

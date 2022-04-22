@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300');
+
+@font-face {
+                          font-family: "SFProText-Regular";
+                          src: url('../fonts/SF-Pro-Text-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Medium";
+                          src: url('../fonts/SF-Pro-Text-Medium.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Bold";
+                          src: url('../fonts/SF-Pro-Text-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Semibold";
+                          src: url('../fonts/SF-Pro-Display-Semibold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Bold";
+                          src: url('../fonts/SF-Pro-Display-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Regular";
+                          src: url('../fonts/SF-Pro-Display-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Semibold";
+                          src: url('../fonts/SF-Pro-Text-Semibold.otf') format("opentype");
+                        }
+                        
+.signin {
+  width               : 100%;
+  height              : 100vh;
+  position            : relative;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(45, 52, 66, 1.0);
+  display: table;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.signin .textinputwhite {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 280px;
+  height              : 100%;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .textinputwhite-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.signin .textinputwhite .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .textinputwhite .emailaddress {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.0px;
+  line-height         : 22.0px;
+}
+.signin .textinputwhite1 {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 280px;
+  height              : 100%;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .textinputwhite1-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 10px;
+}
+.signin .textinputwhite1 .rectangle {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .textinputwhite1 .emailaddress {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.0px;
+  line-height         : 22.0px;
+}
+.signin .submitbuttonteal-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 10px;
+}
+.signin .submitbuttonteal {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 44px;
+  width               : 280px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .submitbuttonteal .rec2 {
+  background-color    : rgba(102, 191, 225, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .submitbuttonteal .login {
+  background-color: rgba(255,255,255,0.0);
+  top: 0px;
+  height: auto;
+  width: 282px;
+  position: absolute;
+  margin: 0;
+  left: -1px;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  font-family: "SFProText-Regular";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18.0px;
+  color: rgba(255, 255, 255, 1.0);
+  text-align: center;
+  letter-spacing: 0.0px;
+  line-height: 24.0px;
+  margin-top: 0;
+  cursor: pointer;
+  height: 44px;
+  padding-top: 5px;
+  border: 0;
+}
+.signin .continueasguest {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : normal;
+  font-style          : normal;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.0px;
+  line-height         : 33.0px;
+}
+.signin .continueasguest-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.signin .forgetpassword {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : normal;
+  font-style          : normal;
+  font-size           : 18.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 24.0px;
+}
+.signin .forgetpassword-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.signin .signup {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : normal;
+  font-style          : normal;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.3px;
+  line-height         : 33.0px;
+}
+.signin .signup-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.signin .donu2019thaveanaccoun {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : normal;
+  font-style          : normal;
+  font-size           : 18.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.3px;
+  line-height         : 24.0px;
+}
+.signin .donu2019thaveanaccoun-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.signin .facebookbutton {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 280px;
+  height              : 100%;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .facebookbutton-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 18px;
+}
+.signin .facebookbutton .rectangle {
+  background-color    : rgba(59, 119, 189, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .facebookbutton .signinwithfaceboo {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : 282px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 22.0px;
+}
+.signin .googlebutton {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 280px;
+  height              : 100%;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .googlebutton-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+.signin .googlebutton .rectangle {
+  background-color    : rgba(217, 31, 38, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 280px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .googlebutton .signinwithgoogle {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 282px;
+  margin-right        : -0px;
+  height              : auto;
+  
+  margin-left         : 0px;
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 22.0px;
+  margin-top: 10px;
+}
+.signin .googlebutton .signinwithgoogle-layout-container {
+  
+  flex-direction      : column;
+  top                 : 0px;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  display             : flex;
+  left                : 0;
+}
+.signin .byusingthisappi {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 12.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 17.0px;
+}
+.signin .byusingthisappi-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 10px;
+}
+.signin .byusingthisappi .span1 {
+  
+}
+.signin .byusingthisappi .span2 {
+  color               : rgba(102, 102, 103, 1.0);
+}
+.signin .byusingthisappi .span3 {
+  color               : rgba(102, 191, 225, 1.0);
+}
+.signin .signin1 {
+  background-color    : rgba(255,255,255,0.0);
+  width               : auto;
+  height              : auto;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular";
+  font-weight         : 700;
+  font-style          : normal;
+  font-size           : 20.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.0px;
+  line-height         : 27.0px;
+}
+.signin .signin1-layout-container {
+  
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 28px;
+}
+.signin .recitelogotaglinergb {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 105px;
+  height              : 100%;
+  
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb-layout-container {
+  
+  flex-direction      : column;
+  top                 : 66px;
+  align-items         : center;
+  height              : 125px;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  display             : flex;
+  left                : 0;
+}
+.signin .recitelogotaglinergb .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 94px;
+  height              : 31px;
+  width               : 105px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 21px;
+  width               : 12px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 14px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 17px;
+  position            : absolute;
+  margin              : 0;
+  left                : 37px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 5px;
+  position            : absolute;
+  margin              : 0;
+  left                : 59px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : 28px;
+  width               : 12px;
+  position            : absolute;
+  margin              : 0;
+  left                : 70px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .group .shape5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 85px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signin .recitelogotaglinergb .shape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 70px;
+  width               : 67px;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+.minHeight
+{
+  min-height: auto !important;
+}
+.signin .textemailaddress {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: -1px;
+    border: 0;
+    background: transparent;
+    height: 45px;
+}
+input.errorClass::placeholder {
+    color: #ff0000;
+}

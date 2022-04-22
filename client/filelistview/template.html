@@ -1,0 +1,306 @@
+<template name="fileListView">
+	<div class="transitions-content">
+		<div class="fileslistview">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					&nbsp;
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Files
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<div class="checkedbox">
+	                    <img class="shape1" src="/img/fileslistview-shape@2x.png" id="selectFileListingView"/>
+	                </div>
+	                <div class="belloringalarmvoicereminder">
+	                    <img class="shape1" src="/img/bell.png" id="gotonotifications"/>
+	                </div>
+				</div>
+			</div>
+			<div class="row searchBar">
+					<div class="col-xs-12 text-center">
+						<div class="barssearchbariphonelight">
+							<div class="searchfield">
+								<div class="searchglyph">
+			                        <div class="background">
+			                        </div>
+			                        <img class="search" src="/img/SearchGlyph.png"/>
+			                    </div>
+			                    <div class="placeholderlabel">
+			                        <input type="text" name="" placeholder="Search" class="searchTextbox" value="{{searchValue}}"/>
+			                    </div>
+			                    <!-- <div class="dictationglyph">
+			                        <div class="background">
+			                        </div>
+			                        <img class="dictation" src="/img/DictationGlyph.png"/>
+			                    </div> -->
+		                    </div>
+						</div>
+						<div class="filterBar">
+							<div class="size filterButtonFileListing" style="font-size: 15px;">
+			                    Upload Date
+			                </div>
+			                <img class="arrow sortOrderButton" src="/img/sizeArrow.png" data-sort="-1"/>
+			                <div class="view listViewButton">
+			                    <div class="layer1" data-view="list">
+			                        <img class="xmlid1308" src="/img/filesiconview-xmlid1308@2x.png" data-view="list"/>
+			                    </div>
+			                </div>
+						</div>
+					</div>
+				</div>
+			<div class="filelistViewDiv {{#if isGridView}} hidden {{/if}}">
+
+				{{#if getFiles}}
+					{{#each getFiles}}
+						<div class="row fileListItem">
+							<div class="fileIconLeft">
+								<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails" data-id="{{this._id}}">
+					                <div class="svg2 gotoFileDetails" data-id="{{this._id}}">
+					                    <div class="layer1 gotoFileDetails" data-id="{{this._id}}">
+					                        <img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}" data-id="{{this._id}}"/>
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+
+							<div class="group4 fileNameMiddle">
+								<div class="interviewcientmp4 gotoFileDetails" data-id="{{this._id}}">
+				                    {{getFileName this.fileName}}
+				                    <img class="width18 {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+				                </div>
+				                <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+				                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+				                </div>
+				            </div>
+				            {{#if showMoreOption this._id}}
+				            <div class="more1 fileMoreOptionRight moreFileControls" data-fileId="{{this._id}}">
+			                    <!-- <div class="group"> -->
+			                        <!-- <div class="x377essentialicons"> -->
+			                            <img class="moredetailsx283x29" style="height: 23px;margin-top: 10px;" src="/img/moreicon.png" data-fileId="{{this._id}}"/>
+			                        <!-- </div>
+			                    </div> -->
+			                </div>
+			                {{/if}}
+			                <div class="ListDeleteButtonRed" data-fileId="{{this._id}}">Delete</div>
+						</div>
+					{{/each}}
+				{{else}}
+					<h2 class="text-center"> No files yet. </h2>
+				{{/if}}
+			</div>
+			<div class="filesiconview {{#if isListView}} hidden {{/if}}">
+				<div class="row iconList">
+					{{#if getFiles}}
+						{{#each getFiles}}
+							<div class="col-xs-4 col-md-3 text-center iconItem">
+								<img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}" data-id="{{this._id}}"/>
+				                <div class="interviewclu2026mp4 gotoFileDetails" style="padding-top: 10px;" data-id="{{this._id}}">
+				                    {{this.fileName}}
+				                </div>
+				                <div style="display: inline-block;">
+					                <img class="star {{#if isNotStarred this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+					                {{#if showMoreOption this._id}}
+					                <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" data-fileId="{{this._id}}"/>
+					                {{/if}}
+				            	</div>
+							</div>
+						{{/each}}
+					{{else}}
+						<h2 class="text-center"> No files yet. </h2>
+					{{/if}}
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>
+
+<template name="fileListViewSelect">
+	<div class="transitions-content">
+		<div class="fileslistview selectedFilesDiv">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-left">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            	<button class="blueButton cancelButton">Cancel</button>
+		            </div>
+		            
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Files
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton nextButton">Next</button>
+				</div>
+			</div>
+			<div class="row searchBar">
+					<div class="col-xs-12 text-center">
+						<div class="barssearchbariphonelight">
+							<div class="searchfield">
+								<div class="searchglyph">
+			                        <div class="background">
+			                        </div>
+			                        <img class="search" src="/img/SearchGlyph.png"/>
+			                    </div>
+			                    <div class="placeholderlabel">
+			                        <input type="text" name="" placeholder="Search" class="searchTextbox"/>
+			                    </div>
+			                    <!-- <div class="dictationglyph">
+			                        <div class="background">
+			                        </div>
+			                        <img class="dictation" src="/img/DictationGlyph.png"/>
+			                    </div> -->
+		                    </div>
+						</div>
+						<div class="filterBar">
+							<div class="size filterButtonFileListing" style="font-size: 1.8vh !important">
+			                    Upload Date
+			                </div>
+			                <img class="arrow sortOrderButton" src="/img/sizeArrow.png" data-sort="-1"/>
+			                <div class="view listViewButton">
+			                    <div class="layer1" data-view="list">
+			                        <img class="xmlid1308" src="/img/filesiconview-xmlid1308@2x.png" data-view="list"/>
+			                    </div>
+			                </div>
+						</div>
+					</div>
+				</div>
+			<div class="filelistViewDiv {{#if isGridView}} hidden {{/if}}">
+				<style type="text/css">
+					.selectedFilesDiv .container {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    margin-top: 8px;
+    width: auto;
+}
+
+/* Hide the browser's default checkbox */
+.selectedFilesDiv .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.selectedFilesDiv .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.selectedFilesDiv .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.selectedFilesDiv .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.selectedFilesDiv .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.selectedFilesDiv .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.selectedFilesDiv .container .checkmark:after {
+  left: 3px;
+  top: -3px;
+  width: 0px;
+  height: 0px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  color: #fff;
+}
+				</style>
+				{{#if getFiles}}
+					{{#each getFiles}}
+						<div class="row fileListItem">
+							<div class="col-xs-12 parentRow selectedFiles">
+								<label class="container">
+								  <input type="checkbox" name="selectFiles" id="selectFiles" class="selectFiles {{this._id}}" data-id="{{this._id}}">
+								  <span class="checkmark"></span>
+								</label>
+
+								<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails" data-id="{{this._id}}">
+					                <div class="svg2 " data-id="{{this._id}}">
+					                    <div class="layer1" data-id="{{this._id}}">
+					                        <img class="path5387" src="{{getFileIcon this.fileName}}" data-id="{{this._id}}"/>
+					                    </div>
+					                </div>
+					            </div>
+
+					            <div class="group4 gotoFileDetails">
+									<div class="interviewcientmp4 " data-id="{{this._id}}">
+					                    {{getFileName this.fileName}}
+					                    <img class="width18 {{#if isNotStarred this._id}} hidden {{/if}} " src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+					                </div>
+					                <div class="a400mbmodified3d "  data-id="{{this._id}}">
+					                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+					                </div>
+					            </div>
+							</div>
+						</div>
+					{{/each}}
+				{{else}}
+					<h2 class="text-center"> No files yet. </h2>
+				{{/if}}
+			</div>
+			<div class="filesiconview {{#if isListView}} hidden {{/if}}">
+				<div class="row iconList">
+					{{#if getFiles}}
+						{{#each getFiles}}
+							<div class="col-xs-4 col-md-3 text-center iconItem">
+								<img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}" data-id="{{this._id}}"/>
+				                <div class="interviewclu2026mp4 gotoFileDetails" style="padding-top: 10px;" data-id="{{this._id}}">
+				                    {{this.fileName}}
+				                </div>
+				                <div style="display: inline-block;">
+					                <img class="star {{#if isNotStarred this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+					                <label class="container">
+									  <input type="checkbox" name="selectFiles" id="selectFiles" class="selectFiles {{this._id}}" data-id="{{this._id}}">
+									  <span class="checkmark"></span>
+									</label>
+				            	</div>
+							</div>
+						{{/each}}
+					{{else}}
+						<h2 class="text-center"> No files yet. </h2>
+					{{/if}}
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>

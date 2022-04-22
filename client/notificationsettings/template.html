@@ -1,0 +1,172 @@
+<template name="notificationsettings">
+	<div class="transitions-content">
+		<div class="notificationsettings">
+			<div class="row topHeader">
+				<div class="col-xs-2 text-center nopadding">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div>
+				</div>
+				<div class="col-xs-8 text-center">
+					<div class="namecase1">
+	                    Notification Settings
+	                </div>
+				</div>
+				<div class="col-xs-2 text-right">
+					&nbsp;
+				</div>
+			</div>
+			<div class="row middleContent" style="padding-top: 25px;">
+				<div class="col-xs-12" style="border-bottom: 1px solid #d8d8d8;border-top: 1px solid #d8d8d8;padding-top: 5px;padding-bottom: 5px;">
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="categoryActive">Register for Push Notifications</label>
+
+					<div class="newSwitchInput">
+					<!-- {{#if getUserData.pushNotificationRegister}} -->
+					  		<!-- <input type="checkbox" name="notificationActive" id="notificationActive" checked> -->
+					  		{{#if getUserData.pushNotificationRegister}}
+					  			<input type="checkbox" id="notificationActive" name="notificationActive" class="switch-input" checked value="1">
+					  		{{else}}
+					  			<input type="checkbox" id="notificationActive" name="notificationActive" class="switch-input" value="0">
+					  		{{/if}}
+
+							<label for="notificationActive" class="switch-label">&nbsp;
+							</label>
+
+							<!-- <span aria-hidden="true">
+								<span id="offButton">Off</span>
+								<span id="onButton">On</span>
+								<a id="onOffButton"></a>
+							</span> -->
+
+					  	<!-- {{else}} -->
+					  		<!-- <input type="checkbox" name="notificationActive" id="notificationActive"> -->
+					  	<!-- {{/if}} -->
+				</div>
+				</div>
+				
+
+					<!-- <label class="switch-light switch-material" style="display: -webkit-inline-box;float: right;"> -->
+						
+					<!-- </label> -->
+				<!-- </div> -->
+
+				<div class="col-xs-12" style="border-bottom: 1px solid #d8d8d8;padding-top: 5px;padding-bottom: 0px;">
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="radio1">Always On</label>
+					 <div class="inputGroup" style="float: right;">
+					 	{{#if getUserData.pushAlwaysOn}}
+					    	<input id="radio1" name="pushradio" type="radio" value="0" checked/>
+					    {{else}}
+					    	<input id="radio1" name="pushradio" type="radio" value="0"/>
+					    {{/if}}
+					    <label for="radio1">&nbsp;</label>
+					  </div>
+				</div>
+
+				<div class="col-xs-12" style="border-bottom: 1px solid #d8d8d8;padding-top: 5px;padding-bottom: 0px;">
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="radio2">8:00 AM - 8:00 PM</label>
+					<div class="inputGroup" style="float: right;">
+						{{#if getUserData.pusheighttoeight}}
+					    	<input id="radio2" name="pushradio" type="radio" value="1" checked/>
+					    {{else}}
+					    	<input id="radio2" name="pushradio" type="radio" value="1"/>
+					    {{/if}}
+					    <label for="radio2">&nbsp;</label>
+					  </div>
+				</div>
+
+				<div class="col-xs-12 disabledDiv" style="border-bottom: 1px solid #d8d8d8;padding-top: 5px;padding-bottom: 0px;">
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="radio3">Off</label>
+					<div class="inputGroup" style="float: right;">
+						{{#if getUserData.pushOff}}
+					    	<input id="radio3" name="pushradio" type="radio" value="2" checked/>
+					    {{else}}
+					    	<input id="radio3" name="pushradio" type="radio" value="2"/>
+					    {{/if}}
+					    <label for="radio3">&nbsp;</label>
+					  </div>
+				</div>
+			</div>
+		</div>
+		
+
+		<style type="text/css">
+			.newSwitchInput .switch-input {
+			  display: none;
+			}
+			.newSwitchInput .switch-label {
+			  position: relative;
+			  display: inline-block;
+			  /*min-width: 112px;*/
+			  cursor: pointer;
+			  font-weight: 500;
+			  text-align: left;
+			  /*margin: 16px;
+			  padding: 16px 0 16px 44px;*/
+			}
+			.newSwitchInput .switch-label:before, .switch-label:after {
+			  content: "";
+			  position: absolute;
+			  margin: 0;
+			  outline: 0;
+			  top: 50%;
+			  -ms-transform: translate(0, -50%);
+			  -webkit-transform: translate(0, -50%);
+			  transform: translate(0, -50%);
+			  -webkit-transition: all 0.3s ease;
+			  transition: all 0.3s ease;
+			}
+			.newSwitchInput .switch-label:before {
+			  /*left: 1px;
+		      width: 35px;
+		      height: 21px;
+		      background-color: #9E9E9E;
+		      border-radius: 10px;*/
+		      left: 0px;
+			    width: 45px;
+			    height: 25px;
+			    background-color: #9E9E9E;
+			    border-radius: 25px;
+			}
+			.newSwitchInput .switch-label:after {
+			  left: 0;
+			  /*width: 20px;
+			  height: 20px;*/
+			  width: 25px;
+			  height: 25px;
+			  background-color: #FAFAFA;
+			  border-radius: 50%;
+			  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+			}
+			.newSwitchInput .switch-label .toggle--on {
+			  display: none;
+			}
+			.newSwitchInput .switch-label .toggle--off {
+			  display: inline-block;
+			}
+			.newSwitchInput .switch-input:checked + .switch-label:before {
+			  background-color: #4CAF50;
+			}
+			.newSwitchInput .switch-input:checked + .switch-label:after {
+			  background-color: #ffffff;
+			  -ms-transform: translate(80%, -50%);
+			  -webkit-transform: translate(80%, -50%);
+			  transform: translate(80%, -50%);
+			}
+			.newSwitchInput .switch-input:checked + .switch-label .toggle--on {
+			  display: inline-block;
+			}
+			.newSwitchInput .switch-input:checked + .switch-label .toggle--off {
+			  display: none;
+			}
+			.newSwitchInput {
+			    right: 46px;
+			    /* width: 21px; */
+			    position: absolute;
+			    margin-top: 8px;
+			    float: right;
+			}
+
+		</style>
+
+	</div>
+</template>

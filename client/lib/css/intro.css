@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300');
+
+@font-face {
+                          font-family: "SFProText-Regular";
+                          src: url('../fonts/SF-Pro-Text-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Medium";
+                          src: url('../fonts/SF-Pro-Text-Medium.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Bold";
+                          src: url('../fonts/SF-Pro-Text-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Semibold";
+                          src: url('../fonts/SF-Pro-Display-Semibold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Bold";
+                          src: url('../fonts/SF-Pro-Display-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Regular";
+                          src: url('../fonts/SF-Pro-Display-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Semibold";
+                          src: url('../fonts/SF-Pro-Text-Semibold.otf') format("opentype");
+                        }
+                        
+.intro {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: auto;
+    margin: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgba(45, 52, 66, 1.0);
+    /* display: table; */
+    overflow-x: hidden;
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.intro .u2022communicationcoll {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 329px;
+  margin-right        : 3px;
+  height              : auto;
+  pointer-events      : auto;
+  margin-left         : -3px;
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.25px;
+  line-height         : 19.0px;
+}
+.intro .u2022communicationcoll-layout-container {
+  pointer-events      : none;
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.intro .u2022communicationcoll .span1 {
+  
+}
+.intro .u2022communicationcoll ul
+{
+  padding-left: 17px;
+}
+.intro .u2022communicationcoll .span2 {
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+}
+.intro .u2022communicationcoll .span3 {
+  
+}
+.intro .u2022communicationcoll .span4 {
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+}
+.intro .u2022communicationcoll .span5 {
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+}
+.intro .u2022communicationcoll .span6 {
+  
+}
+.intro .u2022communicationcoll .span7 {
+  
+}
+.intro .u2022communicationcoll .span8 {
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+}
+.intro .u2022communicationcoll .span9 {
+  
+}
+.intro .features {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(102, 191, 225, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.25px;
+  line-height         : 19.0px;
+  margin-bottom: 5px;
+}
+.intro .intros-layout-container {
+  pointer-events      : none;
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 15px;
+}
+.intro .introduction {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(102, 191, 225, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.25px;
+  line-height         : 19.0px;
+  /*margin-top: 72px;*/
+  margin-bottom: 5px;
+}
+.intro .reciteappgathersa {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 318px;
+  height              : auto;
+  pointer-events      : auto;
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.25px;
+  line-height         : 19.0px;
+}
+.intro .reciteappgathersa-layout-container {
+  pointer-events      : none;
+  flex-direction      : column;
+  align-items         : center;
+  height              : auto;
+  width               : 100%;
+  margin              : 0;
+  display             : flex;
+  margin-top: 35px;
+}
+.intro .recitelogotaglinergb {
+  background-color    : rgba(255,255,255,0.0);
+  width               : 105px;
+  height              : 100%;
+  pointer-events      : auto;
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb-layout-container {
+  pointer-events      : none;
+  flex-direction      : column;
+  top                 : 66px;
+  align-items         : center;
+  height              : 125px;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  display             : flex;
+  left                : 0;
+}
+.intro .recitelogotaglinergb .group1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 94px;
+  height              : 31px;
+  width               : 105px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 21px;
+  width               : 12px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 14px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 17px;
+  position            : absolute;
+  margin              : 0;
+  left                : 37px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 30px;
+  width               : 5px;
+  position            : absolute;
+  margin              : 0;
+  left                : 59px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : 28px;
+  width               : 12px;
+  position            : absolute;
+  margin              : 0;
+  left                : 70px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .group1 .shape5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 9px;
+  height              : 22px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 85px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .recitelogotaglinergb .shape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 70px;
+  width               : 67px;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .rectangle9 {
+  background-color: rgba(102, 191, 225, 1.0);
+    height: 44px;
+    width: calc(100.00% - 236px);
+    margin: 0;
+    border-radius: 5px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    /* margin-top: 49px; */
+    width: 139px;
+}
+.intro .group {
+  background-color    : rgba(255,255,255,0.0);
+  
+  height              : 100%;
+  pointer-events      : auto;
+  position            : relative;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.intro .group-layout-container {
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    /* height: 24px; */
+    width: 100%;
+    margin: 0;
+    display: flex;
+    margin-top: 49px;
+    margin-bottom: 40px;
+}
+.intro .group .proceed {
+  background-color: rgba(255,255,255,0.0); 
+    top: 10px;
+    /* height: auto; */
+    /* width: auto; */
+    position: absolute;
+    /* margin: 0; */
+    left: 10px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-family: "Open Sans", Helvetica, Arial, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    letter-spacing: 0.22px;
+    line-height: 24.0px;
+}
+.intro .group .shape {
+  background-color: rgba(255,255,255,0.0);
+  top: 15px;
+  height: 17px;
+  width: 34px;
+  position: absolute;
+  margin: 0;
+  right: 10px;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

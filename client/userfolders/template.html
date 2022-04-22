@@ -1,0 +1,60 @@
+<template name="userFolders">
+	<div class="transitions-content">
+		<div class="userfolders">
+			<div class="row topHeader">
+				<div class="col-xs-3 text-center nopadding">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		            </div>
+				</div>
+				<div class="col-xs-6 text-center">
+					<div class="namecase1">
+	                    {{getUserName}} - Folders
+	                </div>
+				</div>
+				<div class="col-xs-3 text-right">
+					<div class="checkedbox">
+	                    <img class="shape1" src="/img/fileslistview-shape@2x.png" id="editMasterFolders"/>
+	                </div>
+	                <div class="belloringalarmvoicereminder">
+	                    <img class="shape1" src="/img/bell.png" id="gotonotifications"/>
+	                </div>
+				</div>
+			</div>
+			<div class="row middleContent">
+				{{#each getFolders}}
+					<div class="col-xs-6 col-md-3 col-sm-3 nopadding">
+						<div data-id="{{this._id}}" class="subFolderClick" id="subFolderClick">
+							<span data-id="{{this._id}}">
+								{{#if isNotStarredFolder this._id}}
+									<img class="width18 addToStar"  data-status="false" data-id="{{this._id}}" src="/img/StarBlackIcon.png">
+								{{else}}
+									<img class="width18 removeToStar" data-status="true" data-id="{{this._id}}" src="/img/fileslistselect-star@2x.png">
+								{{/if}}
+								<!-- <img src="/img/fileslistselect-star@2x.png" class="star" data-id="{{this._id}}"/> -->
+							</span>
+							<span class="numberCircle" data-id="{{this._id}}">{{countFolderAndFile this._id}}</span>
+							<span data-id="{{this._id}}" class="folderName">{{this.folderName}}</span>
+							{{#if showDeleteOptionFolder this._id}}
+								<span class="spanDeleteIcon" data-id="{{this._id}}" style="right: 16px;position: absolute;top: 149px;display: none;"> 
+									<img src="/img/Delete.png" class="deleteIcon" data-id="{{this._id}}"/>
+								</span>
+								
+								<span class="spanEditFolderIcon" data-id="{{this._id}}" style="left: 16px;position: absolute;top: 149px;display: none;"> 
+									<img src="/img/moreBlackIconTrans.png" class="deleteIcon" data-id="{{this._id}}" width="38px" />
+								</span>
+							{{/if}}
+						</div>
+					</div>
+				{{/each}}
+				<div class="col-xs-6 col-md-3 col-sm-3 nopadding">
+					<div id="addMasterFolder">
+						<img src="/img/plusIconFolder.png" class="plusImage"/>
+						<p class="addMessage">Add Master Folder</p>
+					</div>
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>

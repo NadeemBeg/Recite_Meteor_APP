@@ -1,0 +1,182 @@
+<template name="collaboratorInfoPage">
+	<div class="collaboratorInfoPage">
+		<div class="collaborators">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav" style="height: 40px;width: 60%;">
+			            <img class="arrowright336 backbuttontopnav" src="/img/verify-account-part-2-arrowright-336@2x.png"/> <!-- style="left: 15px; margin-right: 16px; margin-bottom: 15px;" -->
+			        </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+			              Collaborator Info
+			          </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right backbuttontopnav editCollaboratorIcon">
+					<img class="editImgIcon" style="margin-top: 12px;" src="/img/edit.png"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 simon">
+					<label>{{myName}}</label>
+				</div>
+				{{#if getEmail}}
+				<div class="col-xs-12 col-sm-12 emailTag">
+					<label>Email</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<label>{{getEmail}}</label>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 15px;">
+				</div>
+				{{/if}}
+				{{#if getName}}
+				<div class="col-xs-12 col-sm-12 associatedContact">
+					<label>Associated Contact</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<label>{{getName}}</label>
+				</div>				
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 15px;">
+				</div>
+				{{/if}}
+				<div class="col-xs-12 col-sm-12 case">
+					<label>Project</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<label>{{selecteProject}}</label>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 15px;">
+				</div>
+				<div class="col-xs-12 col-sm-12 controlAccess">
+					<label>Control Access</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<label>{{getPermissions}}</label>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 15px;">
+				</div>
+				<!-- <div class="col-xs-12" >
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="categoryActive">Share with Others</label>
+					<label class="switch-light switch-material" style="display: -webkit-inline-box;float: right;">
+						{{#if getUserData.pushNotificationRegister}}
+					  		<input type="checkbox" name="notificationActive" id="notificationActive" checked>
+					  	{{else}}
+					  		<input type="checkbox" name="notificationActive" id="notificationActive">
+					  	{{/if}}
+					  <span aria-hidden="true">
+						  <span>Off</span>
+						  <span>On</span>
+						  <a></a>
+						</span>
+					</label>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="editCollaboratorPage">
+	<div class="editCollaboratorPage">
+		<div class="collaborators">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav" style="height: 40px;">
+			            <button class="blueButton" style="width: 100%;padding: 0;height: 100%;padding-left: 30px;padding-top: 5px;margin: 0;"><img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/> Cancel</button>
+			         </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+              Edit Collaborator
+          </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right backbuttontopnav nopadding">
+					
+					<button class="blueButton margintop20 updateCollaboratoreDetails" style="width: 100%;
+    height: 100%;
+    padding: 0;">Save</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 simon">
+					<label>{{myName}}</label>
+				</div>
+				{{#if getEmail}}
+				<div class="col-xs-12 col-sm-12 emailTag">
+					<label>Email</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<!-- <input value="{{getEmail}}" class="emailField" type="email" name="email" placeholder="SImonC@dealsdesigns.com" style="border: none;"> -->
+					<label>{{getEmail}}</label>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 10px;">
+				</div>
+				{{/if}}
+				{{#if getName}}
+				<div class="col-xs-12 col-sm-12 associatedContact">
+					<label>Associated Contact</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<!-- <input type="text" id="searchContact" class="selectedContact" value="{{getName}}" name="associatedContact" placeholder="Barry White" style="border: none;"> -->
+					<label>{{getName}}</label>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 10px;">
+				</div>
+				{{/if}}
+				<div class="col-xs-12 col-sm-12 case">
+					<label>Project</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<input type="text" class="selectedProject" value="{{selecteProject}}" name="chooseProjects" id="chooseProjects" placeholder="#32" style="border: none;">
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 10px;">
+				</div>
+				<div class="col-xs-12 col-sm-12 controlAccess">
+					<label>Control Access</label>
+				</div>
+				<div class="col-xs-12 col-sm-12 personEmail">
+					<!-- <input type="text" name="controlAccess" placeholder="Project Administrator" style="border: none;"> -->
+					<select class="form-control" id="controlAccessSelector"> 
+		              <option value="1" {{isSelected id "1"}}>View</option>            
+		              <option value="2" {{isSelected id "2"}}>Edit, Upload & Download</option>            
+		              <option value="3" {{isSelected id "3"}}>Project Administrator</option>
+		              <!-- {{#each allCategories}}
+                      	<option value="{{this._id}}" {{isSelectedCategory this._id}}>{{this.categoryType}}</option>
+                      {{/each}} -->
+		          	</select>
+				</div>
+				<div class="col-xs-12">
+					<hr style="position: inherit;bottom: 10px;">
+				</div>
+				<!-- <div class="col-xs-12" >
+					<label style="padding-left: 7px;float: left;margin-top: 8px;font-family: 'Open Sans', Helvetica, Arial, serif;font-size: 14px;font-weight: 700;" for="categoryActive">Share with Others</label>
+					<label class="switch-light switch-material" style="display: -webkit-inline-box;float: right;">
+						{{#if getUserData.pushNotificationRegister}}
+					  		<input type="checkbox" name="notificationActive" id="notificationActive" checked>
+					  	{{else}}
+					  		<input type="checkbox" name="notificationActive" id="notificationActive">
+					  	{{/if}}
+					  <span aria-hidden="true">
+						  <span>Off</span>
+						  <span>On</span>
+						  <a></a>
+						</span>
+					</label>
+				</div> -->
+				<div class="col-xs-12 col-sm-12 deleteCollaborator text-center">
+					<button class="deleteBtn" >Delete Collaborator</button>
+				</div>				
+			</div>
+		</div>
+	</div>
+	{{> contactslistsearch}}
+	{{> projectslistsearch}}
+</template>
+    

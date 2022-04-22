@@ -1,0 +1,659 @@
+<template name="reportsTab">
+	<style type="text/css">
+					.reportstab .container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    margin-top: -7px;
+    width: auto;
+}
+/* Hide the browser's default checkbox */
+.reportstab .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.editSelectOptions {
+    float: right;
+}
+/* Create a custom checkbox */
+.reportstab .checkmark {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 1px solid #7ec9e5;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.reportstab .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+  border-radius: 100%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.reportstab .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.reportstab .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.reportstab .container .checkmark:after {
+	left: 2px;
+	top: -2px;
+	width: 0px;
+	height: 0px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+	color: #fff;
+}
+				</style>
+	<div class="transitions-content">
+		<div class="reportstab">
+			<div class="row topHeader">
+				<div class="col-xs-3 text-center">
+					&nbsp;
+				</div>
+				<div class="col-xs-6 text-center">
+					<div class="namecase1">
+	                    Reports
+	                </div>
+				</div>
+				<div class="col-xs-3 text-right">
+					<div class="checkedbox editReportFolder">
+	                    <img class="shape1" src="/img/fileslistview-shape@2x.png" id="selectFileListingView"/>
+	                </div>
+	                <div class="belloringalarmvoicereminder">
+	                    <img class="shape1" src="/img/bell.png" id="gotonotifications"/>
+	                </div>
+				</div>
+			</div>
+
+			<div class="row searchBar">
+				<div class="col-xs-12 text-center">
+					<div class="barssearchbariphonelight">
+						<div class="searchfield">
+							<div class="searchglyph">
+		                        <div class="background">
+		                        </div>
+		                        <img class="search" src="/img/SearchGlyph.png"/>
+		                    </div>
+							<div class="placeholderlabel">
+		                    	<input type="text" name="" placeholder="Search" class="searchTextbox searchTextboxSubFolder"/>
+							</div>
+		                    <!-- <div class="dictationglyph">		
+		                        <div class="background">
+		                        </div>
+		                        <img class="dictation" src="/img/DictationGlyph.png"/>
+		                    </div> -->
+	                    </div>
+					</div>
+					<div class="filterBar">
+						<div class="size filterButtonFileListing">
+		                    Upload Date
+		                </div>
+		                <img class="arrow sortOrderButton" src="/img/sizeArrow.png" data-sort="-1"/>
+		                <div class="view listViewButton">
+		                    <div class="layer1" data-view="list">
+		                        <img class="xmlid1308" src="/img/filesiconview-xmlid1308@2x.png" data-view="list"/>
+		                    </div>
+		                </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row middleContent listViewFolder  {{#if isGridView}} hidden {{/if}}" >
+				{{#each getFilesAndFoldersList}}
+					{{#if isFile this}}
+						<div class="row fileListItem">
+							<div class="fileIconLeft">
+								<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails"  data-id="{{this._id}}">
+					                <div class="svg2 gotoFileDetails"  data-id="{{this._id}}">
+					                    <div class="layer1 gotoFileDetails"  data-id="{{this._id}}">
+					                        <img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}"  data-id="{{this._id}}"/>
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div class="group4 fileNameMiddle">
+								<div class="interviewcientmp4 gotoFileDetails"  data-id="{{this._id}}">
+				                    {{getFileName this.fileName}}
+				                    <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+				                </div>
+				                <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+				                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+				                </div>
+				            </div>
+				            <div class="more1 fileMoreOptionRight">
+			                    <div class="group">
+			                        <div class="x377essentialicons">
+			                            <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" data-fileId="{{this._id}}"/>
+			                        </div>
+			                    </div>
+			                </div>
+			                
+			                <div class="ListDeleteButtonRed"  data-fileId="{{this._id}}">Delete</div>
+						</div>
+					{{else}}
+						{{#if isEmptyFolder this}}
+							<div class="row col-xs-12 folderRec nopadding">
+								<div class="folderListDiv">
+									<div class="row fileListItem gotoFolder"  data-folderId="{{this._id}}">
+										<div class="fileIconLeft folderIcon">
+											<div class="fileformatdocumentmpvideoplayerextension gotoFolder"  data-folderId="{{this._id}}">
+								                <div class="svg2 gotoFolder"  data-folderId="{{this._id}}">
+								                    <div class="layer1 gotoFolder"  data-folderId="{{this._id}}">
+								                        <img class="path5387 gotoFolder" src="/img/FolderIcons.png"/>
+								                    </div>
+								                </div>
+								            </div>
+										</div>
+
+										<div class="group4 fileNameMiddle">
+											<div class="interviewcientmp4 gotoFolder"  data-folderId="{{this._id}}">
+							                    {{this.folderName}}
+							                    <img class="width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+							                </div>
+							                <div class="a400mbmodified3d gotoFolder"  data-folderId="{{this._id}}">
+							                    {{getFoldersFileCount this._id}} {{getFoldersFoldersCount this._id}}, {{getFolderModifiedDate this}}
+							                </div>
+							            </div>
+
+							            <div class="more1 fileMoreOptionRight">
+						                    <div class="group">
+						                        <div class="x377essentialicons">
+						                             <img class="moredetailsx283x29 moreFileControls" src="/img/rightArrowLight.png" />
+						                        </div>
+						                    </div>
+						                </div>
+
+						                <div class="ListFeleteFolderButtonRed"  data-fileId="{{this._id}}">Delete</div>
+									</div>
+								</div>
+							</div>
+						{{else}}
+							<div class="row col-xs-12 folderRec nopadding">
+								<div class="folderTitle">
+									<div class="leftName gotoFolder" data-folderId="{{this._id}}">
+										{{this.folderName}}
+										<img class="width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+									</div>
+									<div class="rightIcons">
+										<img src="/img/moreBlackIcon.png" class="moreIconBlack" data-folderId="{{this._id}}"/>
+										<img src="/img/sizeArrow.png" class="sizeArrow" />
+									</div>
+									
+								</div>
+								<div class="folderListDiv folderDivBody">
+									{{#each this.subFiles}}
+										<div class="row fileListItem">
+											<div class="fileIconLeft">
+												<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails"  data-id="{{this._id}}">
+									                <div class="svg2 gotoFileDetails"  data-id="{{this._id}}">
+									                    <div class="layer1 gotoFileDetails"  data-id="{{this._id}}">
+									                        <img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}"  data-id="{{this._id}}"/>
+									                    </div>
+									                </div>
+									            </div>
+											</div>
+
+											<div class="group4 fileNameMiddle">
+												<div class="interviewcientmp4 gotoFileDetails"  data-id="{{this._id}}">
+								                    {{getFileName this.fileName}}
+								                    <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+								                </div>
+								                <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+								                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+								                </div>
+								            </div>
+
+								            <div class="more1 fileMoreOptionRight">
+							                    <div class="group">
+							                        <div class="x377essentialicons">
+							                            <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" data-fileId="{{this._id}}"/>
+							                        </div>
+							                    </div>
+							                </div>
+							                
+							                <div class="ListDeleteButtonRed"  data-fileId="{{this._id}}">Delete</div>
+										</div>
+									{{/each}}
+									{{#if this.subFolders}}
+										{{#each hasSubFodlers this._id}}
+											<div class="row fileListItem gotoFolder"  data-folderId="{{this._id}}">
+												<div class="fileIconLeft folderIcon">
+													<div class="fileformatdocumentmpvideoplayerextension gotoFolder"  data-folderId="{{this._id}}">
+										                <div class="svg2 gotoFolder"  data-folderId="{{this._id}}">
+										                    <div class="layer1 gotoFolder"  data-folderId="{{this._id}}">
+										                        <img class="path5387 gotoFolder" src="/img/FolderIcons.png"/>
+										                    </div>
+										                </div>
+										            </div>
+												</div>
+
+												<div class="group4 fileNameMiddle">
+													<div class="interviewcientmp4 gotoFolder"  data-folderId="{{this._id}}">
+									                    {{this.folderName}}
+									                    <img class="width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+									                    <!-- <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}"> -->
+									                </div>
+									                <div class="a400mbmodified3d gotoFolder"  data-folderId="{{this._id}}">
+									                	{{getFoldersFileCount this._id}} {{getFoldersFoldersCount this._id}}, 
+									                    {{getFolderModifiedDate this}}
+									                </div>
+									            </div>
+
+									            <!-- <div class="more1 fileMoreOptionRight">
+								                    <div class="group">
+								                        <div class="x377essentialicons">
+								                             <img class="moredetailsx283x29 moreFileControlsRight" src="/img/rightArrowLight.png" />
+								                        </div>
+								                    </div>
+								                </div> -->
+
+								                
+
+								                <div class="ListFeleteFolderButtonRed"  data-fileId="{{this._id}}">Delete</div>
+											</div>
+										{{/each}}
+									{{/if}}
+								</div>
+							</div>
+						{{/if}}
+					{{/if}}
+				{{/each}}
+				<!-- {{#if hasFilesAndFolders this.folderId}} -->
+					
+				<!-- {{else}}
+					<b><center>This folder is empty.</center></b>
+				{{/if}} -->
+			</div>
+			<div class="row middleContent listIconViewFolder {{#if isListView}} hidden {{/if}}">
+				{{#each getFilesAndFoldersList}}
+					{{#if isFile this}}
+						<div class="col-xs-6 col-md-2 col-sm-3 col-lg-2 nopadding">
+							<div class="subFolderClick" id="subFolderClick" style="background: transparent;">
+								<img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}" style="height: 100%" />
+			            	</div>
+			            	<div class="mainFolderName">
+			            		<p style="margin:0;">{{this.fileName}}</p>
+			            		<img class="star {{#if isNotStarred this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png" style="height: 20px;">
+					            <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" style="height: 20px;" data-fileId="{{this._id}}"/>
+			            	</div>
+						</div>
+					{{else}}
+						<div class="col-xs-6 col-md-2 col-sm-3 col-lg-2 nopadding" data-folderid="{{this._id}}" data-id="{{this._id}}">
+							<div class="subFolderClick gotoFolder" id="subFolderClick" data-folderid="{{this._id}}" data-id="{{this._id}}">
+								<div class="row gotoFolder" data-folderid="{{this._id}}" data-id="{{this._id}}">
+									{{#if isEmptyFolder this}}
+										<p class="iconEmptyFolder gotoFolder" data-folderid="{{this._id}}" data-id="{{this._id}}"> Empty Folder </p>
+									{{else}}
+										{{#each this.subFiles}}
+											<div class="col-xs-4 nopadding folderIconSubItem folderIconFileSubItem gotoFolder" data-folderid="{{../_id}}">
+												<div class="counterFolder gotoFolder" data-folderid="{{../_id}}">
+													<img class="path5387 gotoFileDetails gotoFolder" src="{{getFileIcon this.fileName}}" style="height: 100%" data-folderid="{{../_id}}"/>
+												</div>
+												<div class="subFolderNames gotoFolder" data-folderid="{{../_id}}">
+													{{this.fileName}}
+												</div>
+											</div>
+										{{/each}}
+										{{#each this.subFolders}}
+											<div class="col-xs-4 nopadding folderIconSubItem gotoFolder" data-folderid="{{../_id}}">
+												<div class="counterFolder gotoFolder" data-folderid="{{../_id}}">
+													{{getFileFoldersCount this}}
+												</div>
+												<div class="subFolderNames gotoFolder" data-folderid="{{../_id}}">
+													{{this.folderName}}
+												</div>
+											</div>
+										{{/each}}
+									{{/if}}
+								</div>
+							</div>
+							<div class="mainFolderName " data-folderid="{{this._id}}" data-id="{{this._id}}">
+								<p style="margin:0;" class="" data-folderid="{{this._id}}" data-id="{{this._id}}">{{this.folderName}}</p>
+			            		<img class="star width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+			            		{{#if showMoreOptionFolder this._id}}
+									<img src="/img/moreBlackIcon.png" class="moreIconBlack" data-folderId="{{this._id}}" style="width: 40px;" />
+								{{/if}}
+							</div>
+						</div>
+					{{/if}}
+				{{/each}}
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>
+
+<template name="reportsTabSelect">
+	<style type="text/css">
+					.reportstab .container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    margin-top: -7px;
+    width: auto;
+}
+/* Hide the browser's default checkbox */
+.reportstab .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.editSelectOptions {
+    float: right;
+}
+/* Create a custom checkbox */
+.reportstab .checkmark {
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 1px solid #7ec9e5;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.reportstab .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+  border-radius: 100%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.reportstab .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.reportstab .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.reportstab .container .checkmark:after {
+	left: 2px;
+	top: -2px;
+	width: 0px;
+	height: 0px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+	color: #fff;
+}
+				</style>
+	<div class="transitions-content">
+		<div class="reportstab selectReports">
+			<div class="row topHeader">
+				<div class="col-xs-3 text-left">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" style="left: 10px;" />
+		            	<button class="blueButton cancelButton" style="margin-left: 10px;margin-top: 12px;">Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-6 text-center">
+					<div class="namecase1">
+	                    Reports
+	                </div>
+				</div>
+				<div class="col-xs-3 text-right">
+					<button class="blueButton nextButton">Next</button>
+				</div>
+			</div>
+
+			<div class="row searchBar">
+				<div class="col-xs-12 text-center">
+					<div class="barssearchbariphonelight">
+						<div class="searchfield">
+							<div class="searchglyph">
+		                        <div class="background">
+		                        </div>
+		                        <img class="search" src="/img/SearchGlyph.png"/>
+		                    </div>
+							<div class="placeholderlabel">
+		                    	<input type="text" name="" placeholder="Search" class="searchTextbox searchTextboxSubFolder"/>
+							</div>
+		                    <!-- <div class="dictationglyph">		
+		                        <div class="background">
+		                        </div>
+		                        <img class="dictation" src="/img/DictationGlyph.png"/>
+		                    </div> -->
+	                    </div>
+					</div>
+					<div class="filterBar">
+						<div class="size filterButtonFileListing">
+		                    Upload Date
+		                </div>
+		                <img class="arrow sortOrderButton" src="/img/sizeArrow.png" data-sort="-1"/>
+		                <!-- <div class="view listViewButton">
+		                    <div class="layer1" data-view="list">
+		                        <img class="xmlid1308" src="/img/filesiconview-xmlid1308@2x.png" data-view="list"/>
+		                    </div>
+		                </div> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="row middleContent listViewFolder  {{#if isGridView}} hidden {{/if}}" >
+				{{#each getFilesAndFoldersList}}
+					{{#if isFile this}}
+						<div class="row fileListItem">
+							<div class="fileIconLeft">
+								<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails"  data-id="{{this._id}}">
+					                <div class="svg2 gotoFileDetails"  data-id="{{this._id}}">
+					                    <div class="layer1 gotoFileDetails"  data-id="{{this._id}}">
+					                        <img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}"  data-id="{{this._id}}"/>
+					                    </div>
+					                </div>
+					            </div>
+							</div>
+							<div class="group4 fileNameMiddle">
+								<div class="interviewcientmp4 gotoFileDetails"  data-id="{{this._id}}">
+				                    {{getFileName this.fileName}}
+				                    <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+				                </div>
+				                <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+				                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+				                </div>
+				            </div>
+			                <div class="editSelectOptions">
+								<label class="container">
+								  <input type="checkbox" name="folderSelect" id="folderSelect" class="selectFiles" value="1" data-Id="{{this._id}}" data-type="file">
+								  <span class="checkmark"></span>
+								</label>
+							</div>
+			                <div class="ListDeleteButtonRed"  data-fileId="{{this._id}}">Delete</div>
+						</div>
+					{{else}}
+						{{#if isEmptyFolder this}}
+						{{else}}
+							<div class="row col-xs-12 folderRec nopadding">
+								<div class="folderTitle">
+									<div class="leftName gotoFolder" data-folderId="{{this._id}}">
+										{{this.folderName}}
+										<img class="width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+									</div>
+									<div class="editSelectOptions">
+										<label class="container">
+										  <input type="checkbox" name="folderSelect" id="folderSelect" class="selectFiles" value="1" data-Id="{{this._id}}" data-type="folder">
+										  <span class="checkmark"></span>
+										</label>
+									</div>
+								</div>
+								<div class="folderListDiv folderDivBody">
+									{{#each this.subFiles}}
+										<div class="row fileListItem">
+											<div class="fileIconLeft">
+												<div class="fileformatdocumentmpvideoplayerextension gotoFileDetails"  data-id="{{this._id}}">
+									                <div class="svg2 gotoFileDetails"  data-id="{{this._id}}">
+									                    <div class="layer1 gotoFileDetails"  data-id="{{this._id}}">
+									                        <img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}"  data-id="{{this._id}}" />
+									                    </div>
+									                </div>
+									            </div>
+											</div>
+
+											<div class="group4 fileNameMiddle">
+												<div class="interviewcientmp4 gotoFileDetails"  data-id="{{this._id}}">
+								                    {{getFileName this.fileName}}
+								                    <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}">
+								                </div>
+								                <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+								                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+								                </div>
+								            </div>
+							                <div class="editSelectOptions">
+												<label class="container">
+												  <input type="checkbox" name="folderSelect" id="folderSelect" class="selectFiles" value="1" data-Id="{{this._id}}" data-type="file" data-parentFolderId = "{{../_id}}">
+												  <span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									{{/each}}
+									{{#if this.subFolders}}
+										{{#each hasSubFodlers this._id}}
+											<div class="row fileListItem gotoFolder"  data-folderId="{{this._id}}">
+												<div class="fileIconLeft folderIcon">
+													<div class="fileformatdocumentmpvideoplayerextension gotoFolder"  data-folderId="{{this._id}}">
+										                <div class="svg2 gotoFolder"  data-folderId="{{this._id}}">
+										                    <div class="layer1 gotoFolder"  data-folderId="{{this._id}}">
+										                        <img class="path5387 gotoFolder" src="/img/FolderIcons.png"/>
+										                    </div>
+										                </div>
+										            </div>
+												</div>
+
+												<div class="group4 fileNameMiddle">
+													<div class="interviewcientmp4 gotoFolder"  data-folderId="{{this._id}}">
+									                    {{this.folderName}}
+									                    <img class="width18  {{#if isNotStarredFolder this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png">
+									                    <!-- <img class="width18  {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}"> -->
+									                </div>
+									                <div class="a400mbmodified3d gotoFolder"  data-folderId="{{this._id}}">
+									                	{{getFoldersFileCount this._id}} {{getFoldersFoldersCount this._id}}, 
+									                    {{getFolderModifiedDate this}}
+									                </div>
+									            </div>
+								                <div class="editSelectOptions">
+													<label class="container">
+													  <input type="checkbox" name="folderSelect" id="folderSelect" class="selectFiles" value="1" data-Id="{{this._id}}" data-type="folder" data-parentFolderId = "{{../_id}}">
+													  <span class="checkmark"></span>
+													</label>
+												</div>
+											</div>
+										{{/each}}
+									{{/if}}
+								</div>
+							</div>
+						{{/if}}
+					{{/if}}
+				{{/each}}
+				<!-- {{#if hasFilesAndFolders this.folderId}} -->
+					
+				<!-- {{else}}
+					<b><center>This folder is empty.</center></b>
+				{{/if}} -->
+			</div>
+			<!-- <div class="row middleContent listIconViewFolder {{#if isListView}} hidden {{/if}}">
+				{{#each getFilesAndFoldersList}}
+					{{#if isFile this}}
+						<div class="col-xs-6 col-md-2 col-sm-3 col-lg-2 nopadding">
+							<div class="subFolderClick" id="subFolderClick" style="background: transparent;">
+								<img class="path5387 gotoFileDetails" src="{{getFileIcon this.fileName}}" style="height: 100%" />
+			            	</div>
+			            	<div class="mainFolderName">
+			            		<p style="margin:0;">{{this.fileName}}</p>
+			            		<img class="star {{#if isNotStarred this._id}} hidden {{/if}}" src="/img/fileslistselect-star@2x.png" style="height: 20px;">
+					            <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" style="height: 20px;" data-fileId="{{this._id}}"/>
+			            	</div>
+						</div>
+					{{else}}
+						<div class="col-xs-6 col-md-2 col-sm-3 col-lg-2 nopadding gotoFolder" data-folderid="{{this._id}}">
+							<div class="subFolderClick gotoFolder" id="subFolderClick" data-folderid="{{this._id}}">
+								<div class="row gotoFolder" data-folderid="{{this._id}}">
+									{{#if isEmptyFolder this}}
+										<p class="iconEmptyFolder gotoFolder" data-folderid="{{this._id}}"> Empty Folder </p>
+									{{else}}
+										{{#each this.subFiles}}
+											<div class="col-xs-4 nopadding folderIconSubItem folderIconFileSubItem gotoFolder" data-folderid="{{../_id}}">
+												<div class="counterFolder gotoFolder" data-folderid="{{../_id}}">
+													<img class="path5387 gotoFileDetails gotoFolder" src="{{getFileIcon this.fileName}}" style="height: 100%" data-folderid="{{../_id}}"/>
+												</div>
+												<div class="subFolderNames gotoFolder" data-folderid="{{../_id}}">
+													{{this.fileName}}
+												</div>
+											</div>
+										{{/each}}
+										{{#each this.subFolders}}
+											<div class="col-xs-4 nopadding folderIconSubItem gotoFolder" data-folderid="{{../_id}}">
+												<div class="counterFolder gotoFolder" data-folderid="{{../_id}}">
+													{{getFileFoldersCount this}}
+												</div>
+												<div class="subFolderNames gotoFolder" data-folderid="{{../_id}}">
+													{{this.folderName}}
+												</div>
+											</div>
+										{{/each}}
+									{{/if}}
+								</div>
+							</div>
+							<div class="mainFolderName gotoFolder" data-folderid="{{this._id}}">
+								<p style="margin:0;" class="gotoFolder" data-folderid="{{this._id}}">{{this.folderName}}</p>
+			            		<img class="star" src="/img/fileslistselect-star@2x.png" style="height: 20px;display:none;">
+					            <img class="moredetailsx283x29 moreFileControls" src="/img/moreicon.png" style="height: 20px;visibility: hidden;"/>
+							</div>
+						</div>
+					{{/if}}
+				{{/each}}
+			</div> -->
+			<input type="hidden" name="selectReportFilesIds" id="selectReportFilesIds" value="">
+		</div>
+	</div>
+</template>

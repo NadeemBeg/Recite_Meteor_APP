@@ -1,0 +1,1267 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300');
+
+@font-face {
+                          font-family: "SFProText-Regular";
+                          src: url('../fonts/SF-Pro-Text-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Medium";
+                          src: url('../fonts/SF-Pro-Text-Medium.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Bold";
+                          src: url('../fonts/SF-Pro-Text-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Semibold";
+                          src: url('../fonts/SF-Pro-Display-Semibold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Bold";
+                          src: url('../fonts/SF-Pro-Display-Bold.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProDisplay-Regular";
+                          src: url('../fonts/SF-Pro-Display-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Semibold";
+                          src: url('../fonts/SF-Pro-Text-Semibold.otf') format("opentype");
+                        }
+                        
+.verifyaccountpart2 {
+  width               : 100%;
+  height              : 100vh;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.verifyaccountpart2 .topnavsinglewithbackbar {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 80px;
+  width               : 375px;
+  margin              : 0;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .topnavsinglewithbackbar .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 80px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .topnavsinglewithbackbar .topnavsingle {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 80px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .topnavsinglewithbackbar .topnavsingle .rectangle4 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 0px;
+  height              : 80px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .editprofile {
+  background-color    : rgba(255,255,255,0.0);
+  margin-top                 : 44px;
+  height              : auto;
+  width               : auto;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+  font-size           : 20.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.1px;
+  line-height         : 27.0px;
+}
+.verifyaccountpart2 .backbuttontopnav {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 25px;
+  width               : 13px;
+  margin              : 45px auto;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .backbuttontopnav .arrowright336 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 25px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .toverifyyouraccou {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 90px;
+  height              : auto;
+  width               : 337px;
+  position            : absolute;
+  margin              : 0;
+  left                : 20px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : left;
+  letter-spacing      : 0.29px;
+  line-height         : 19.0px;
+}
+.verifyaccountpart2 .line3 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 1px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 521px;
+  height              : 291px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 291px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .iphonexhomeindicatorhomeindicatoronlight {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 257px;
+  height              : 34px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .iphonexhomeindicatorhomeindicatoronlight .background1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 34px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .iphonexhomeindicatorhomeindicatoronlight .rectangle24 {
+  background-color    : rgba(0, 0, 0, 1.0);
+  top                 : 20px;
+  height              : 5px;
+  width               : 134px;
+  position            : absolute;
+  margin              : 0;
+  left                : 121px;
+  border-radius       : 2px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .dictation {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 241px;
+  height              : 25px;
+  width               : 15px;
+  position            : absolute;
+  margin              : 0;
+  left                : 330px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .dictation1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 241px;
+  height              : 25px;
+  width               : 15px;
+  position            : absolute;
+  margin              : 0;
+  left                : 330px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .delete {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 18px;
+  width               : 23px;
+  position            : absolute;
+  margin              : 0;
+  left                : 302px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a0 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 167px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 129px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a0 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a0 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 8px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a9 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 113px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 252px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a9 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a9 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a9 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 113px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 129px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a8 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a8 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a8 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a7 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 113px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 6px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a7 .rectangle1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a7 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a7 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 59px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 252px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a6 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a6 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a6 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 59px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 129px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a5 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a5 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a5 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 59px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 6px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a4 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 48px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a4 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 30px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a4 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 252px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a3 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a3 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 29px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a3 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 129px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 .abc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 29px;
+  height              : auto;
+  width               : 119px;
+  position            : absolute;
+  margin              : 0;
+  left                : -1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Bold", Helvetica, Arial, serif;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 2.0px;
+  line-height         : 12.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 .abc .span1 {
+  
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 .abc .span2 {
+  
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a2 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 6px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a1 .keybackground {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 47px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iphonexkeyboardslightnumeric .a1 .label1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : auto;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : -0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProDisplay-Regular", Helvetica, Arial, serif;
+  font-size           : 25.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.29px;
+  line-height         : 30.0px;
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 41px;
+  height              : 100px;
+  width               : 359px;
+  position            : absolute;
+  margin              : 0;
+  left                : 8px;
+  border-radius       : 13px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .base {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 100px;
+  width               : 359px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .body {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 57px;
+  height              : auto;
+  width               : 330px;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular", Helvetica, Arial, serif;
+  font-size           : 15.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.24px;
+  line-height         : 18.0px;
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .title {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 36px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 16px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Semibold", Helvetica, Arial, serif;
+  font-size           : 15.0px;
+  color               : rgba(0, 0, 0, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.24px;
+  line-height         : 20.0px;
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 8px;
+  height              : 20px;
+  width               : 335px;
+  position            : absolute;
+  margin              : 0;
+  left                : 8px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .timestamp {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 5px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 310px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular", Helvetica, Arial, serif;
+  font-size           : 13.0px;
+  color               : rgba(138, 138, 143, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.08px;
+  line-height         : 15.0px;
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .appname {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 2px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 27px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular", Helvetica, Arial, serif;
+  font-size           : 13.0px;
+  color               : rgba(138, 138, 143, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.08px;
+  line-height         : 18.0px;
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .graphicsappiconsmessages {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .graphicsappiconsmessages .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .graphicsappiconsmessages .messagesicon {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .graphicsappiconsmessages .messagesicon .background1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .extensionsnotificationsimessage3 .header .graphicsappiconsmessages .messagesicon .messagesicon1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 4px;
+  height              : 13px;
+  width               : 15px;
+  position            : absolute;
+  margin              : 0;
+  left                : 3px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 297px;
+  height              : 20px;
+  width               : 170px;
+  position            : absolute;
+  margin              : 0;
+  left                : 103px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .group .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .group .oval1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 50px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .group .oval2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 100px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .group .oval3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 150px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .rectangle {
+  background-color    : rgba(243, 243, 243, 1.0);
+  top                 : 3626px;
+  height              : 50px;
+  width               : 375px;
+  position            : absolute;
+  margin              : 0;
+  left                : -856px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iconsiosaddcircleoutline {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3638px;
+  height              : 27px;
+  width               : 27px;
+  position            : absolute;
+  margin              : 0;
+  left                : -528px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .iconsiosaddcircleoutline .iconsiosaddcircleoutline1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 27px;
+  width               : 27px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .line31 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 1px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .line32 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 1px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .line33 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 1px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.verifyaccountpart2 .didnu2019treceivecode {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 13.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.06px;
+  line-height         : 18.0px;
+  margin-top: 90px;
+}
+.verifyaccountpart2 .editphonenumber {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 13.0px;
+  color               : rgba(51, 183, 201, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.06px;
+  line-height         : 18.0px;
+  margin-top:20px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+.verifyaccountpart2 .verify-text-box
+{
+  width: 100%;
+  font-size: 80px;
+  height: 45px;
+  color: #d8d8d8;
+  background-image: url(img/verify-account-part-2-line-3-1@2x.png);
+  background-repeat: no-repeat;
+  border: 0;
+  background-position: bottom;
+  max-width: 35px;
+  margin-right: 20px;
+  -webkit-appearance: none;
+  -webkit-text-security: disc;
+  -moz-webkit-text-security: disc;
+  -moz-text-security: disc;
+}
+.verifyaccountpart2 .verify-text-box::-webkit-inner-spin-button, .verifyaccountpart2 .verify-text-box::-webkit-outer-spin-button
+{
+  -webkit-appearance: none; 
+}
+.verifyaccountpart2 .textGroup
+{
+  margin-top: 50px;
+}

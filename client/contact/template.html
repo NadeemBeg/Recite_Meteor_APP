@@ -1,0 +1,369 @@
+<template name="addNewContact">
+	<div class="transitions-content">
+		<div class="addnewcontact">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav" style="height: 40px;">
+		                
+		                <button class="blueButton displayBlock" style="width: 100%;height: 100%;padding: 7px 0px 0px 20px;margin: 0;"><img class="arrowright336" style="" src="/img/verify-account-part-2-arrowright-336@2x.png"/> Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+	                    New Contact
+	                </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right">
+					<button class="blueButton margintop20" id="addContactSaveButton">Save</button>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<hr style="position: unset !important;">
+				</div>
+			</div>
+			<div class="middleContent">
+				<div class="row  displayFlex">
+					<div class="col-xs-6 nopadding" style="border-bottom: 1px solid #d8d8d8;border-right: 1px solid #d8d8d8;">
+						<div class="newContactItem borderBottom forLeft">
+							<label class="addContactLabel"> Name:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="fullName" id="fullName" class="newContactTextBox" placeholder="Full Name" />
+						</div>
+						<div class="newContactItem borderBottom forLeft">
+							<label class="addContactLabel"> Title: </label>
+							<input type="text" name="contactTitle" id="contactTitle" class="newContactTextBox" placeholder="Title" />
+						</div>
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Company: </label>
+							<input type="text" name="company" id="company" class="newContactTextBox" placeholder="Company" />
+						</div>
+					</div>
+					<div class="col-xs-6 nopadding borderBottom">
+						<div class="addNewProfilePic text-center">
+							<img src="/img/UserIconNewDefault.png" width="110" name="profilePhotoPreview" id="profilePhotoPreview" class="profilePhotoPreview"/>
+							<img src="/img/CameraButtonIconEdit.png" class="img-responsive addNewCameraButton" />
+							<p>Profile Photo</p>
+							<input type="file" name="profilePhotoFile" id="profilePhotoFile" class="hidden" accept="image/*" capture="capture">	
+							<input type="hidden" class="" name="selectOverlayFileHiddenContact" id="selectOverlayFileHiddenContact" value="">					
+						</div>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 nopadding borderBottom  borderRight">
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Personal:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="personalNumber" id="personalNumber" class="newContactTextBox" placeholder="Phone" data-inputmask="'mask': '(999)-999-9999'" inputmode="numeric"/>
+						</div>
+					</div>
+					<div class="col-xs-6 nopadding borderBottom">
+						
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Work:</label>
+							<input type="text" name="workNumber" id="workNumber" class="newContactTextBox" placeholder="Phone" data-inputmask="'mask': '(999)-999-9999'" inputmode="numeric"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Personal Email:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="personalEmail" id="personalEmail" class="newContactTextBox" placeholder="Email" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Work Email:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="workEmail" id="workEmail" class="newContactTextBox" placeholder="Email" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Home Address: </label>
+							<input type="text" name="homeAddress" id="homeAddress" class="newContactTextBox" placeholder="Address" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Work Address: </label>
+							<input type="text" name="workAddress" id="workAddress" class="newContactTextBox" placeholder="Address" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Website: </label>
+							<input type="text" name="website" id="website" class="newContactTextBox" placeholder="Website" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Facebook: </label>
+							<input type="text" name="facebook" id="facebook" class="newContactTextBox" placeholder="Facebook" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> LinkedIn: </label>
+							<input type="text" name="linkedin" id="linkedin" class="newContactTextBox" placeholder="LinkedIn" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding noBorder">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Tags: </label>
+							<div class="addContactTagItems">
+								<input type="hidden" name="tagNames" id="tagNames" value=""> 
+								<ul class="tagsUL">
+									<li><img src="/img/PlusIconEmail.png" class="addTagsIcon" /></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>
+
+
+<template name="editContact">
+	<div class="transitions-content">
+		<div class="editcontact">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		                <button class="blueButton marginleft15 displayBlock margintop12">Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+	                    Edit Contact
+	                </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right">
+					<button class="blueButton margintop12" id="editContactSaveButton">Save</button>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<hr style="position: unset !important;">
+				</div>
+			</div>
+			<div class="middleContent">
+				<div class="row  displayFlex">
+					<div class="col-xs-6 nopadding" style="border-bottom: 1px solid #d8d8d8;border-right: 1px solid #d8d8d8;">
+						<div class="newContactItem borderBottom forLeft">
+							<label class="addContactLabel"> Name:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="fullName" id="fullName" class="newContactTextBox" placeholder="Full Name" value="{{getDetails.fullName}}"/>
+						</div>
+						<div class="newContactItem borderBottom forLeft">
+							<label class="addContactLabel"> Title: </label>
+							<input type="text" name="contactTitle" id="contactTitle" class="newContactTextBox" placeholder="Title"  value="{{getDetails.contactTitle}}"/>
+						</div>
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Company: </label>
+							<input type="text" name="company" id="company" class="newContactTextBox" placeholder="Company"   value="{{getDetails.company}}" />
+						</div>
+					</div>
+					<div class="col-xs-6 nopadding borderBottom">
+						<div class="addNewProfilePic text-center">
+							{{#if getDetails.profilePic}}
+
+								<img src="{{getDetails.profilePic}}" width="110" name="profilePhotoPreview" class="profilePhotoPreview" id="profilePhotoPreview" />
+
+							{{else}}
+								<img src="/img/UserIconNewDefault.png" width="110" name="profilePhotoPreview" class="profilePhotoPreview"  id="profilePhotoPreview" />
+							{{/if}}
+							<img src="/img/CameraButtonIconEdit.png" class="img-responsive addNewCameraButton" />
+							<p>Profile Photo</p>
+							<input type="file" name="profilePhotoFile" id="profilePhotoFile" class="hidden" accept="image/*" capture="capture">	
+							<input type="hidden" class="" name="selectOverlayFileHiddenContact" id="selectOverlayFileHiddenContact" value="">					
+						</div>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 nopadding borderBottom  borderRight">
+						
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Personal:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="personalNumber" id="personalNumber" class="newContactTextBox" placeholder="Phone" value="{{getDetails.personalNumber}}" data-inputmask="'mask': '(999)-999-9999'" inputmode="numeric"/>
+						</div>
+					</div>
+					<div class="col-xs-6 nopadding borderBottom">
+						<div class="newContactItem forLeft">
+							<label class="addContactLabel"> Work: </label>
+							<input type="text" name="workNumber" id="workNumber" class="newContactTextBox" placeholder="Phone" value="{{getDetails.workNumber}}" data-inputmask="'mask': '(999)-999-9999'" inputmode="numeric"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Personal Email:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="personalEmail" id="personalEmail" class="newContactTextBox" placeholder="Email" value="{{getDetails.personalEmail}}"/>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Work Email:<span style="color: #ff0000;">*</span> </label>
+							<input type="text" name="workEmail" id="workEmail" class="newContactTextBox" placeholder="Email" value="{{getDetails.workEmail}}"/>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Home Address: </label>
+							<input type="text" name="homeAddress" id="homeAddress" class="newContactTextBox" placeholder="Address" value="{{getDetails.homeAddress}}" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Work Address: </label>
+							<input type="text" name="workAddress" id="workAddress" class="newContactTextBox" placeholder="Address" value="{{getDetails.workAddress}}"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Website: </label>
+							<input type="text" name="website" id="website" class="newContactTextBox" placeholder="Website" value="{{getDetails.website}}"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Facebook: </label>
+							<input type="text" name="facebook" id="facebook" class="newContactTextBox" placeholder="Facebook" value="{{getDetails.facebook}}"/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 nopadding borderBottom">
+						<div class="newContactItem">
+							<label class="addContactLabel"> LinkedIn: </label>
+							<input type="text" name="linkedin" id="linkedin" class="newContactTextBox" placeholder="LinkedIn" value="{{getDetails.linkedin}}"/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12 nopadding noBorder">
+						<div class="newContactItem">
+							<label class="addContactLabel"> Tags: </label>
+							<div class="addContactTagItems">
+								<input type="hidden" name="tagNames" id="tagNames" value="{{getDetails.contactTags}}"> 
+								<ul class="tagsUL">
+									<li><img src="/img/PlusIconEmail.png" class="addTagsIcon" /></li>
+									{{#each getDetails.contactTags}}
+										<li><div class="tag" style="color:#{{colorOfTag this}}"><p class="left">{{nameOfTag this}}</p><p class="right deleteButton">X</p></div></li>
+									{{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>
+
+
+<template name="addContactsFromDevice">
+	<div class="transitions-content">
+		<div class="addnewcontactsfromdevice">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+	                    Add Contact
+	                </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right margintop20">
+					<a href="/invite-contact" class="blueButton">Skip</a>
+				</div>
+			</div>
+			<div class="middleContent">
+				{{#if showSearchBar}}
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<p class="inviteCountMessage">&nbsp;</p>
+						<input type="text" name="searchTextBox" id="searchTextBoxInvite" class="searchTextBox" placeholder="Search">
+						<img src="/img/SearchGlyph.png" class="eyeGlass" />
+						<!-- <img src="/img/DictationGlyph.png" class="mikeIcon" /> -->
+					</div>
+				</div>
+				{{/if}}
+				<div class="row inviteRowsDiv">
+					{{#if getContactList}}
+						{{#each getContactList}}
+							<div class="col-xs-12 inviteRow">
+								<div class="iconDiv">
+									{{#if this.contactImage}}
+										<img src="/img/BoyIconEdit.png" width="50" />
+									{{else}}
+										<img src="/img/BoyIconEdit.png" width="50" />
+									{{/if}}
+									
+								</div>
+								<div class="inviteNameDiv">
+									<p class="name">
+										{{this.contactName}}
+									</p>
+									{{#if this.contactPersonalEmail}}
+										<p class="email">
+											{{this.contactPersonalEmail}}
+										</p>
+									{{else}}
+										{{#if this.contactNumber}}
+											<p class="email">
+												{{this.contactNumber}}
+											</p>
+										{{/if}}
+									{{/if}}
+								</div>
+								<div class="addDiv">
+									<button class="blueButton addButton" data-rawid="{{this.otherFields.rawId}}">Add</button>
+								</div>
+							</div>
+						{{/each}}
+					{{else}}
+						<div class="text-center">
+							<h4>No contacts yet.</h4>
+						</div>
+					{{/if}}
+				</div>
+				{{#if showSearchBar}}
+				<div class="row inviteButtonDiv">
+					<button class="allAddButton">Add All {{getContactListCount}} to Contacts</button>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,295 @@
+<template name="homeTab">
+	<style type="text/css">
+		
+	</style>
+	<div class="transitions-content ">
+		<!-- <script src="/js/hammer.min.js"></script>
+	<script src="/js/swipeout.js"></script>
+	<script src="/js/zepto.min.js"></script> -->
+		<div class="hometab">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-right">
+					&nbsp;
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Home
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right paddingleft0">
+					{{#if isDevice}}
+					<div class="belloringalarmvoicereminder addContactButton">
+	                    <img class="shape1" src="/img/contactBookIcon.png"/>
+	                </div>
+	                {{/if}}
+	                <div class="belloringalarmvoicereminder AddSingleContactButton">
+	                    <img class="shape1" src="/img/contactAddIcon.png"/>
+	                </div>
+	                <div class="belloringalarmvoicereminder goNotification">
+	                    <img class="shape1" src="/img/bell.png"/>
+	                </div>
+				</div>
+			</div>
+
+			<div class="row searchBar">
+				<div class="col-xs-12 text-center">
+					<div class="barssearchbariphonelight">
+						<div class="searchfield">
+							<div class="searchglyph">
+                <div class="background">
+                </div>
+	                <img class="search" src="/img/SearchGlyph.png"/>
+	            	</div>
+		            <div class="placeholderlabel">
+		                <input type="text" name="homeSearchBox" placeholder="Search" class="searchTextbox" id="homeSearchBox"/>
+		            </div>
+		            <!-- <div class="dictationglyph">
+		                <div class="background">
+		                </div>
+		                <img class="dictation" src="/img/DictationGlyph.png"/>
+		            </div> -->
+	          </div>
+					</div>
+					<!-- <div class="starredText text-left">
+		          		<b>Recent</b> Starred
+		          </div> -->
+				</div>
+			</div>
+
+			<div class="row homeMiddlePortion">
+				<div class="topHeadings">
+					<div class="col-xs-3 text-center padding5 nameSorter">
+						Name
+						<img class="dictation" src="/img/Vector.png" style="width: 16px;" />						
+					</div>
+					<div class="col-xs-3 text-center padding5">
+						Preview
+					</div>
+					<div class="col-xs-2 text-center padding5">
+						Alerts
+					</div>
+					<div class="col-xs-2 text-center padding5">
+						Tags
+					</div>
+					<div class="col-xs-2 text-center padding5">
+						Contacted
+					</div>
+				</div>
+				<div class="bodyPart ui-content" role="main">
+					<!-- <ul data-role="listview" style="padding: 0;list-style: none;">
+						<li><div class="homeRowItem">
+							<div class="col-xs-3 text-center displayFlex clientName">
+								<div class="innerDiv">
+									<div class="leftIconHome text-center">
+										<img src="/img/BoyIconEdit.png" width="20" />
+									</div>
+									<div class="rightTextHome text-center">
+										<b>Alexa S.</b>
+										<p>Folder 2</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<p> Hey Fred, Can you look at this for me? </p>
+							</div>
+							<div class="col-xs-2 text-center alertDiv padding5">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv padding5">
+								<div class="tagElem">
+									Private
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv padding5">
+								11/15
+							</div>
+						</div></li>
+
+						<li><div class="homeRowItem">
+							<div class="col-xs-3 text-center displayFlex clientName">
+								<div class="innerDiv">
+									<div class="leftIconHome text-center">
+										<img src="/img/BoyIconEdit.png" width="20" />
+									</div>
+									<div class="rightTextHome text-center">
+										<b>Alexa S.</b>
+										<p>Folder 2</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<p> Hey Fred, Can you look at this for me? </p>
+							</div>
+							<div class="col-xs-2 text-center alertDiv">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv">
+								<div class="tagElem">
+									Private
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv">
+								11/15
+							</div>
+						</div></li>
+
+						<li><div class="homeRowItem">
+							<div class="col-xs-3 text-center displayFlex clientName">
+								<div class="innerDiv">
+									<div class="leftIconHome text-center">
+										<img src="/img/BoyIconEdit.png" width="20" />
+									</div>
+									<div class="rightTextHome text-center">
+										<b>Alexa S.</b>
+										<p>Folder 2</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<p> Hey Fred, Can you look at this for me? </p>
+							</div>
+							<div class="col-xs-2 text-center alertDiv">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv">
+								<div class="tagElem">
+									Private
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv">
+								11/15
+							</div>
+						</div></li>
+
+						<li><div class="homeRowItem">
+							<div class="col-xs-3 text-center displayFlex clientName">
+								<div class="innerDiv">
+									<div class="leftIconHome text-center">
+										<img src="/img/BoyIconEdit.png" width="20" />
+									</div>
+									<div class="rightTextHome text-center">
+										<b>Alexa S.</b>
+										<p>Folder 2</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<p> Hey Fred, Can you look at this for me? </p>
+							</div>
+							<div class="col-xs-2 text-center alertDiv">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv">
+								<div class="tagElem">
+									Private
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv">
+								11/15
+							</div>
+						</div></li>
+
+						<li><div class="homeRowItem">
+							<div class="col-xs-3 text-center displayFlex clientName">
+								<div class="innerDiv">
+									<div class="leftIconHome text-center">
+										<img src="/img/BoyIconEdit.png" width="20" />
+									</div>
+									<div class="rightTextHome text-center">
+										<b>Alexa S.</b>
+										<p>Folder 2</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<p> Hey Fred, Can you look at this for me? </p>
+							</div>
+							<div class="col-xs-2 text-center alertDiv">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv">
+								<div class="tagElem">
+									Private
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv">
+								11/15
+							</div>
+						</div></li>
+					</ul> -->
+
+				    <!-- <ul id="list" style="padding: 0;list-style: none;">
+				    <li> -->
+		    			<div class="row homeRowItem">
+		    				<div class="col-xs-1 clientImg nopadding personDetails" data-selectUser="{{myId}}">
+		    					<div class="leftIconHome text-center personDetails" data-selectUser="{{myId}}">
+									<img src="/img/Icon3 old.png" width="20" class="personDetails" data-selectUser="{{myId}}" />
+								</div>
+		    				</div>
+		    				<div class="col-xs-2 displayFlex clientName nopadding">
+								<div class="innerDiv personDetails" data-selectUser="{{myId}}">							
+									<div class="rightTextHome">
+										<b class="personDetails" data-selectUser="{{myId}}">{{me}}</b>
+										<p></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-3 text-center previewDiv">
+								<!-- <p> {{this.shareMessage}} </p> -->-
+							</div>
+							<div class="col-xs-2 text-center alertDiv padding5">
+								<div class="alertText">1</div>
+							</div>
+							<div class="col-xs-2 text-center tagsDiv padding5">
+								<div class="tagElem">
+									ME
+								</div>
+							</div>
+							<div class="col-xs-2 text-center contactedDiv padding5">
+								<!-- {{getDate this.sharedDate}} -->-
+							</div>
+		    			</div>
+				    <!-- </li> -->
+				    	{{#each getContacts}}
+				    		<!-- <li class="test"> -->
+				    			<div class="row homeRowItem">
+				    				<div class="col-xs-1 clientImg gotoFileDetails nopadding"  data-id="{{this._id}}">
+				    					<div class="leftIconHome text-center gotoFileDetails"  data-id="{{this._id}}">
+												<img src="{{getUserIcon @index}}" width="20" class="gotoFileDetails selectUserDetails"  data-id="{{this._id}}" data-selectUser="{{this._id}}"/>
+											</div>
+				    				</div>
+				    				<div class="col-xs-2 displayFlex clientName gotoFileDetails nopadding"  data-id="{{this._id}}">
+										<div class="innerDiv gotoFileDetails"  data-id="{{this._id}}">							
+											<div class="rightTextHome gotoFileDetails">
+												<b class="selectUserDetails gotoFileDetails"  data-id="{{this._id}}" data-selectUser="{{this._id}}">{{getUserName this.fullName}}</b>
+												<p></p>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 text-center previewDiv gotoFileDetails"  data-id="{{this._id}}">
+										 - 
+									</div>
+									<div class="col-xs-2 text-center alertDiv padding5 gotoFileDetails"  data-id="{{this._id}}">
+										<div class="alertText gotoFileDetails"  data-id="{{this._id}}">1</div>
+									</div>
+									<div class="col-xs-2 text-center tagsDiv padding5 gotoFileDetails"  data-id="{{this._id}}">
+										
+											{{{getContactsTag this}}}
+										
+									</div>
+									<div class="col-xs-2 text-center contactedDiv padding5 gotoFileDetails"  data-id="{{this._id}}">
+										<!-- {{getDate this.sharedDate}} -->-
+									</div>
+									<div class="ListDeleteButtonRedHome" data-fileId="{{this._id}}" style="padding: 10px 20px 20px;">Delete</div>					
+				    			</div>		    			
+				    		<!-- </li> -->
+
+				    	{{/each}}
+				    <!-- </ul> -->
+				</div>
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+	
+</template>

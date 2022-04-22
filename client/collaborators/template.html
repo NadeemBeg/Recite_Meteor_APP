@@ -1,0 +1,64 @@
+<template name="collaboratorsPage">
+	<div class="transitions-content">
+		<div class="collaboratorsPage">
+			<div class="collaborators">
+				<div class="row topHeader">
+					<div class="col-xs-3 col-sm-2 text-center">
+						<div class="backbuttontopnav">
+			                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+			            </div>
+					</div>
+					<div class="col-xs-6 col-sm-8 text-center">
+						<div class="namecase1">
+	              Collaborators
+	          </div>
+					</div>
+					<div class="col-xs-3 col-sm-2 text-right nopadding">
+						<div class="collaboratorsPageAddUserIcon large">
+							<img src="/img/AddUserIcon1.png"/>
+						</div>
+					</div>
+				</div>
+				{{#if getCollaborators}}
+				<!-- <div class="row collaboratorTopHeading">
+					<div class="col-xs-4 col-sm-4 text-center">
+						<label>Collaborators</label>
+					</div>
+					<div class="col-xs-4 col-sm-4 text-center">
+						<label>Permissions</label>
+					</div>
+					<div class="col-xs-4 col-sm-4 text-center ">
+						<label>Settings</label>
+					</div>
+				</div> -->
+				<div class="setHeight">
+				{{#each getCollaborators}}
+					<div class="row collaboratorContacts {{isFirst @index}} {{isLast @index}} {{onlyOneCollaborator @index}}">
+						<div class="col-xs-9 col-sm-9" style="margin-top: 10px; display: inline-block;text-overflow: ellipsis;overflow: hidden;">
+							<label>{{getName this._id}}</label><br><label>{{getPermissions this._id}}</label>
+						</div>
+						<!-- <div class="col-xs-5 col-sm-5 text-center" style="margin-top: 10px;"> -->
+							<!-- <label>{{getPermissions this._id}}</label> -->
+						<!-- </div> -->
+						<div class="col-xs-3 col-sm-3 text-right ">
+							<div class="goCollaboratorsInfo" style="display: inline-block;height: 40px;width: 40px;position: absolute;top: 50%;right: 0;transform: translate(0, 10px);"  data-id="{{this._id}}">
+								<img class="arrowright33qq6 " data-id="{{this._id}}" src="/img/arrow_right-[#336].png" style="position: absolute;top: 50%;right: 50%;left: 50%;bottom: 50%;transform: translate(-50%, -50%);" />
+							</div>
+						</div>
+					</div>				
+				{{/each}}
+				</div>
+				{{else}}
+				<div class="row noCollaboratorDiv">
+					<div class="col-xs-12 col-sm-12 ">
+						<label>You have no collaborators.<br>Tap below to add your <br>first collaborator.</label>
+					</div>
+					<div class="col-xs-12 col-sm-12 ">
+						<a href="/addCollaboratorpage"><img src="/img/addIconColl.png" style="height: 50px;width: 50px; border-radius: 5px;"></a>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

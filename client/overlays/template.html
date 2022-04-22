@@ -1,0 +1,527 @@
+<template name="createOverlay">
+	<div class="createOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-12">
+					<ul class="createOverlayUl">
+						{{#if isDevice}}
+						<li class="takePhotoButton">
+							<img class="shape" src="/img/CameraIcon.png">
+							Take Photo
+						</li>
+						{{/if}}
+						<li class="uploadMediaButton">
+							<img class="shape" src="/img/PhotoIcon.png">
+							Upload Media
+						</li>
+						<li class="uploadFileButton">
+							<img class="shape" src="/img/FolderIcons.png">
+							Upload File
+						</li>
+						<li  class="createFolderButton">
+							<img class="shape" src="/img/FolderCreateIcons.png">
+							Create Folder
+						</li>
+					</ul>
+					<input type="file" class="hidden" name="createOverlayFile" id="createOverlayFile" multiple="">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="tabs">
+	<div class="row belowTab">
+		<div class="col-xs-2" id="homeTab">
+			<img  class="shape" src="/img/homeicon.png">
+			<div class="home">
+                Home
+            </div>
+		</div>
+        <div class="col-xs-2 col-half-offset" id="filesTab">
+        	<img  class="shape" src="/img/filetabicon.png">
+        	<div class="files">
+                Files
+            </div>
+        </div>
+        <div class="col-xs-2 col-half-offset" id="uploadFileTab">
+        	<img  class="shape" src="/img/createtabicon.png">
+        	<div class="create">
+                Create
+            </div>
+        </div>
+        <div class="col-xs-2 col-half-offset" id="reportsTab">
+        	<img  class="shape" src="/img/reportstabicon.png">
+        	<div class="reports">
+                Reports
+            </div>
+        </div>
+        <div class="col-xs-2 col-half-offset" id="accountsTab">
+        	<img  class="shape" src="/img/accounttabicon.png">
+        	<div class="account">
+                Account
+            </div>
+        </div>
+	</div>
+</template>
+
+<template name="waitingOverlay">
+	<div class="waitingOverlay">
+		<div class="overlayBackground">
+			<div class="waitingContent">
+				<p> <i class="fa fa-spinner fa-spin"></i> </p>
+				<p> Please wait... </p>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="filterOptionsOverlay">
+	<div class="filteroptionslistoverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-12 nopadding">
+					<ul class="createOverlayUl">
+						<li class="listByModifiedDate">
+							<img class="shape" src="/img/ClockIcon.png">
+							List by Modified
+						</li>
+						<li class="listByName">
+							<img class="shape" src="/img/AaIcon.png">
+							List by Name
+						</li>
+						<li class="listBySize">
+							<img class="shape" src="/img/ShareIcon.png">
+							List by Size
+						</li>
+						<li class="listByUploadDate">
+							<img class="shape" src="/img/UploadIcon.png">
+							List By Upload date
+						</li>
+						<li class="listByType">
+							<img class="shape" src="/img/TagIcon.png">
+							List by Type
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="fileControlOverlay">
+	<div class="foldercontrolsoverlay fileFilter">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-12 nopadding">
+					<ul class="createOverlayUl">
+						<li class="fileFolderName">
+							<img class="shape main" src="/img/FolderMainIcon.png">
+							<div class="fileNameInOverlay">
+								<p></p>
+							</div>
+						</li>
+						<li id="shareFileLi">
+							<img class="shape" src="/img/ShareIcon.png">
+							Share
+						</li>
+						<!-- <li>
+							<img class="shape" src="/img/UserAccessIcon.png">
+							Manage Access
+							<hr>
+						</li> -->
+						<li id="downloadFileLi">
+							<img class="shape" src="/img/DownloadIcon.png">
+							Download
+						</li>
+						<li id="fileStarLi">
+							<img class="shape" src="/img/StarBlackIcon.png">
+							<span>Add to Starred</span>
+							<hr>
+						</li>
+						<!-- <li>
+							<img class="shape" src="/img/ExportIcon.png">
+							Export
+						</li> -->
+						{{#if checkRoot}}
+						<li id="addToReportLi">
+							<img class="shape" src="/img/ReportFolderIcon.png">
+							<span>Add to a Report Folder</span>
+						</li>
+						<li id="showFolder">
+							<img class="shape" src="/img/SearchIcon.png">
+							Show in Folder
+						</li>
+						{{/if}}
+						<li id="printLi">
+							<img class="shape" src="/img/PrinterIcon.png">
+							Print
+						</li>
+						<li id="renameFileLi">
+							<a href="#" style="cursor: pointer;">
+								<img class="shape" src="/img/TagIcon.png">
+								Rename
+							</a>
+						</li>
+						<li id="tagFileLi">
+							<img class="shape" src="/img/HashIcon.png">
+							Tag
+						</li>
+						<li id="copyToLi">
+							<img class="shape" src="/img/CopyIcon.png">
+							Copy
+						</li>
+						<li id="moveToLi">
+							<img class="shape" src="/img/MoveIcon.png">
+							Move
+						</li>
+						<li id="deleteFileLi">
+							<img class="shape" src="/img/DeleteTrashIcon.png">
+							Delete
+						</li>
+					</ul>
+					<input type="file" class="hidden" name="createOverlayFile" id="createOverlayFile" multiple="">
+				</div>
+			</div>
+		</div>
+	</div>
+	{{> selectForCopyFiles}}
+</template>
+
+<template name="folderControlOverlay">
+	<div class="foldercontrolsoverlay options">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-12 nopadding">
+					<ul class="createOverlayUl">
+						<li class="fileFolderName">
+							<img class="shape main" src="/img/FolderMainIcon.png">
+							<div class="fileNameInOverlay">
+								<p></p>
+							</div>
+						</li>
+						<li id="shareFileLi">
+							<img class="shape" src="/img/ShareIcon.png">
+							Share
+						</li>
+						<!-- <li>
+							<img class="shape" src="/img/UserAccessIcon.png">
+							Manage Access
+							<hr>
+						</li> -->
+						<li id="downloadFileLi">
+							<img class="shape" src="/img/DownloadIcon.png">
+							Download
+						</li>
+						<li id="fileStarLi">
+							<img class="shape" src="/img/StarBlackIcon.png">
+							<span>Add to Starred</span>
+							<hr>
+						</li>
+						<li id="exportFileLi">
+							<img class="shape" src="/img/ExportIcon.png">
+							Export
+						</li>
+						{{#if checkRoot}}
+						<li id="addToReportLi">
+							<img class="shape" src="/img/ReportFolderIcon.png">
+							<span>Add to a Report Folder</span>
+						</li>
+						<li id="showFolder">
+							<img class="shape" src="/img/SearchIcon.png">
+							Show in Folder
+						</li>
+						{{/if}}
+						<li id="printMultipleFiles">
+							<img class="shape" src="/img/PrinterIcon.png">
+							Print
+						</li>
+						<li id="renameFileLi">
+							<a href="#" style="cursor: pointer;">
+								<img class="shape" src="/img/TagIcon.png">
+								Rename
+							</a>
+						</li>
+						<li id="tagFileLi">
+							<img class="shape" src="/img/HashIcon.png">
+							Tag
+						</li>
+						<li id="copyFolderLi">
+							<img class="shape" src="/img/CopyIcon.png">
+							Copy
+						</li>
+						<li id="moveFolderLi">
+							<img class="shape" src="/img/MoveIcon.png">
+							Move
+						</li>
+						<li id="deleteFileLi">
+							<img class="shape" src="/img/DeleteTrashIcon.png">
+							Delete
+						</li>
+					</ul>
+					<input type="file" class="hidden" name="createOverlayFile" id="createOverlayFile" multiple="">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+
+<template name="tagOverlay">
+	<div class="tagOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-6 text-left">
+					<button class="blueButton" id="addTagSaveButton">Save</button>
+				</div>
+				<div class="col-xs-6 text-right">
+					<button class="blueButton" id="addTagCancelButton">Cancel</button>
+				</div>
+				<div class="col-xs-12 text-left">
+					<div class="labels" style="">
+						<label style="" class="addTagLabel" for="tagTextBox"> Add Tags: </label>
+					</div>
+					<div class="colors" style="">
+						<input type="text" name="tagTextBox" id="tagTextBox" style="" class="addTagTextBox" placeholder="Tag0,Tag1">
+					</div>
+					<hr style="" class="addTagHR">
+				</div>
+				<div class="col-xs-12 text-left">
+					<div class="labels" style="">
+						<label style=""> Choose Color: </label>
+					</div>
+					<input type="hidden" name="colorName" id="colorName" value="" />
+					<div class="colors" style="">
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #D0021B;" data-color="D0021B">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #F5A623;"  data-color="F5A623">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #F8E71C;" data-color="F8E71C">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #8B572A;" data-color="8B572A">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #7ED321;" data-color="7ED321">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #417505;" data-color="417505">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #CC37EA;" data-color="CC37EA">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #5E02AF;" data-color="5E02AF">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #4A90E2;" data-color="4A90E2">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #50E3C2;" data-color="50E3C2">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #B8E986;" data-color="B8E986">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #000000;" data-color="000000">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #4A4A4A;" data-color="4A4A4A">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #9B9B9B;" data-color="9B9B9B">
+							</div>
+						</div>
+						<div class="parentDiv">
+							<div class="childDiv" style="background: #FFFFFF;" data-color="FFFFFF">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="sendItemOverlay">
+	<div class="sendItemOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-9 text-center">
+					<div class="discoveryopposings">
+	                    Discovery_Opposing_Side_Zoe.zip
+	                </div>
+				</div>
+				<div class="col-xs-3 text-right">
+					<button class="blueButton" id="cancelSendItemButton">Cancel</button>
+				</div>
+				<div class="col-xs-12 text-center nopadding">
+					<hr style="position: unset;margin-bottom: 10px !important;">
+				</div>
+				<div class="col-xs-6 text-left">
+					<label class="sendto">
+		                Send to
+		            </label>
+		            <br>
+		            <!-- <input type="text" name="" placeholder="Email, Name or Group" class="sendToTextBox"> -->
+		            <select class="select2-dropdown" name="state" placeholder="Email or Name">
+					</select>
+				</div>
+				<div class="col-xs-6 text-left">
+					<label class="userCan">
+		                User Can
+		            </label>
+		            <ul class="userCanUl">
+		            	<li>
+		            		<input type="checkbox" name="viewCheckbox" id="viewCheckbox"> <label>View</label>
+		            	</li>
+		            	<li>
+		            		<input type="checkbox" name="editCheckbox" id="editCheckbox"> <label>Edit & Download</label>
+		            	</li>
+		            </ul>
+				</div>
+				<div class="col-xs-12 text-center nopadding">
+					<hr style="position: unset;margin-bottom: 10px !important;margin-top: 0px !important;">
+				</div>
+				<div class="col-xs-12 text-left">
+					<textarea name="messageTextArea" id="messageTextArea" placeholder="Message (optional)" class="sendToTextArea"></textarea>
+				</div>
+				<div class="col-xs-12 text-center">
+					<button class="sendToSubmitButton">Share</button>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</template>
+
+<template name="selectFileOverlay">
+	<div class="selectFileOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-12">
+					<ul class="createOverlayUl">
+						{{#if isDevice}}
+						<li class="takePhotoButton">
+							<img class="shape" src="/img/CameraIcon.png">
+							Take Photo
+						</li>
+						{{/if}}
+						<li class="uploadMediaButton">
+							<img class="shape" src="/img/PhotoIcon.png">
+							Upload Media
+						</li>
+						<li class="uploadFileButton">
+							<img class="shape" src="/img/FolderIcons.png">
+							Upload File
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="multipleSelectFileOptionsOverlay">
+	<div class="multipleSelectFileOptionsOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-4 rowItem borderBottom borderRight" id="shareFileMultiple">
+					<div class="innerItem">
+						<img src="/img/Share1Icon.png" class="leftIcon" />
+						<span class="rightText">Share</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem borderBottom borderRight" id="printMultipleFiles">
+					<div class="innerItem">
+						<img src="/img/PrinterIcon.png"  class="leftIcon"/>
+						<span class="rightText">Print</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem borderBottom" id="addStarMultiple">
+					<div class="innerItem">
+						<img src="/img/StarBlueIcon.png"  class="leftIcon"/>
+						<span class="rightText">Star</span>
+					</div>
+				</div>
+
+				<div class="col-xs-4 rowItem borderBottom borderRight" id="deleteMultipleButton">
+					<div class="innerItem">
+						<img src="/img/DeleteTrashIcon.png"  class="leftIcon"/>
+						<span class="redColor rightText">Delete</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem borderBottom borderRight copyFiles">
+					<div class="innerItem">
+						<img src="/img/CopyIcon.png"  class="leftIcon"/>
+						<span class="rightText">Copy</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem borderBottom moveFiles">
+					<div class="innerItem">
+						<img src="/img/MoveIcon.png"  class="leftIcon"/>
+						<span class="rightText">Move</span>
+					</div>
+				</div>
+
+				<div class="col-xs-4 rowItem  borderRight" id="multipleDownloadDiv">
+					<div class="innerItem">
+						<img src="/img/DownloadIcon.png"  class="leftIcon"/>
+						<span class="rightText">Download</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem borderRight" id="multipleExportDiv">
+					<div class="innerItem">
+						<img src="/img/ExportIcon.png"  class="leftIcon"/>
+						<span class="rightText">Export</span>
+					</div>
+				</div>
+				<div class="col-xs-4 rowItem" id="addTagMultiple">
+					<div class="innerItem">
+						<img src="/img/HashIcon.png"  class="leftIcon"/>
+						<span class="rightText">Tag</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="notificationOverlay">
+	<div class="notificationOverlay">
+		<div class="overlayBackground">
+			<div class="row overlayBody">
+				<div class="col-xs-4 rowItem borderBottom borderRight" id="unReadNotification" style="width: 100%;">
+					<div class="innerItem">
+						<span class="rightText">Mark all as read.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+
+<template name="imageViewer">
+	<div class="imageViewer">
+		<a href="#" id="closeImageViewer"><i class="fa fa-times"></i></a>
+	</div>
+</template>

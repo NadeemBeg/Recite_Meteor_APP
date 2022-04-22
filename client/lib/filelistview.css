@@ -1,0 +1,779 @@
+.fileslistview {
+  width               : 100%;
+  height              : 100vh;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+.fileslistview .namecase1 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 700;
+  font-style          : normal;
+  font-size           : 16px;
+  color               : rgba(45, 52, 66, 1.0);
+  text-align          : center;
+  line-height         : 27.0px;
+  margin-top         : 9px;
+}
+.fileslistview .checkedbox, .userfolders .checkedbox, .subfoldersdiv .checkedbox, .reportstab .checkedbox  {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 20px;
+  width               : 25px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  display: inline-block;
+  margin-top: 10px;
+}
+.fileslistview .checkedbox .shape1, .userfolders .checkedbox .shape1, .subfoldersdiv .checkedbox .shape1, .reportstab .checkedbox .shape1{
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .belloringalarmvoicereminder, .userfolders  .belloringalarmvoicereminder, .subfoldersdiv .belloringalarmvoicereminder, .reportstab .belloringalarmvoicereminder{
+  background-color    : rgba(255,255,255,0.0);
+  height              : 22px;
+  width               : 20px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  display: inline-block;
+  margin-left: 11px;
+  margin-top: 10px;
+}
+.fileslistview .belloringalarmvoicereminder .shape1, .userfolders  .belloringalarmvoicereminder  .shape1, .subfoldersdiv .belloringalarmvoicereminder  .shape1,.reportstab .belloringalarmvoicereminder  .shape1{
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 22px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .arrowright336 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : 20px;
+  width               : 10px;
+  position            : absolute;
+  margin              : 0;
+  left                : 21px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+
+.fileslistview .barssearchbariphonelight, .subfoldersdiv  .barssearchbariphonelight, .reportstab  .barssearchbariphonelight{
+  background-color    : rgba(255,255,255,0.0);
+  height              : 44px;
+  width               : 100%;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  margin-top: 18px;
+}
+.fileslistview .barssearchbariphonelight .searchfield, .subfoldersdiv .barssearchbariphonelight .searchfield,.reportstab .barssearchbariphonelight .searchfield {
+  background-color    : rgba(232, 232, 232, 1.0);
+  top                 : 0px;
+  height              : 44px;
+  width               : 100%;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .dictationglyph, .subfoldersdiv .barssearchbariphonelight .dictationglyph, .reportstab .barssearchbariphonelight .dictationglyph {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 19px;
+  width               : 11px;
+  position            : absolute;
+  margin              : 0;
+  right                : 2%;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .dictationglyph .background, .subfoldersdiv .barssearchbariphonelight .dictationglyph .background, .reportstab .barssearchbariphonelight .dictationglyph .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 19px;
+  width               : 11px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .dictationglyph .dictation, .subfoldersdiv .barssearchbariphonelight .dictationglyph .dictation, .reportstab .barssearchbariphonelight .dictationglyph .dictation {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 19px;
+  width               : 11px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  display: none;
+}
+.fileslistview .barssearchbariphonelight .searchglyph, .subfoldersdiv .barssearchbariphonelight .searchglyph, .reportstab .barssearchbariphonelight .searchglyph {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 15px;
+  height              : 14px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  overflow            : hidden;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .searchglyph .background, .subfoldersdiv .barssearchbariphonelight .searchglyph .background, .reportstab .barssearchbariphonelight .searchglyph .background {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 14px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .searchglyph .search, .subfoldersdiv .barssearchbariphonelight .searchglyph .search, .reportstab .barssearchbariphonelight .searchglyph .search {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 14px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .barssearchbariphonelight .placeholderlabel, .subfoldersdiv .barssearchbariphonelight .placeholderlabel, .reportstab .barssearchbariphonelight .placeholderlabel {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 94%;
+  position            : absolute;
+  margin              : 0;
+  left                : 30px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular", Helvetica, Arial, serif;
+  font-size           : 17.0px;
+  color               : rgba(142, 142, 147, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.41px;
+  line-height         : 22.0px;
+  margin-top: 10px;
+}
+.fileslistview .size, .subfoldersdiv .size, .reportstab .size {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 148px; */
+    height: auto;
+    /* width: 50px; */
+    /* position: absolute; */
+    margin: 0;
+    /* left: 24px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-family: "Open Sans", Helvetica, Arial, serif;
+    font-weight: 600;
+    font-style: normal;
+    /*font-size: 1.8vh !important;*/
+    font-size: 15px !important;
+    color: rgba(3, 3, 3, 1.0);
+    text-align: left;
+    line-height: 18.0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: inline-block;
+    float: left;
+    padding-right: 15px;
+}
+.fileslistview .arrow, .subfoldersdiv .arrow, .reportstab .arrow {
+  background-color: rgba(255,255,255,0.0);
+  height: 9px;
+  width: 17px;
+  margin: 0;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  float: left;
+  margin-top: 15px;
+}
+.fileslistview .view, .subfoldersdiv .view, .reportstab .view {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 151px; */
+    /* height: 12px; */
+    width: 40px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 338px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* border: 1px solid; */
+}
+.fileslistview .view .layer1, .subfoldersdiv .view .layer1, .reportstab .view .layer1  {
+  background-color: rgba(255,255,255,0.0);
+    /* top: 0px; */
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    /* left: 0px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    text-align: right;
+}
+.fileslistview .view .layer1 .xmlid1308, .subfoldersdiv .view .layer1 .xmlid1308, .reportstab .view .layer1 .xmlid1308, .reportstab .view .layer1 .xmlid1308, .reportstab .view .layer1 .xmlid1308 {
+  background-color: rgba(255,255,255,0.0);
+    /* top: 0px; */
+    height: 12px;
+    width: 13px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 0px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    text-align: right;
+}
+.fileslistview .star {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 303px; */
+    height: 18px;
+    width: 18px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 153px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+}
+.fileslistview .filesiconview .star {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 303px; */
+    height: 18px;
+    width: 18px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 153px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-right: 5px;
+}
+.fileslistview.selectedFilesDiv .filesiconview .star {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 303px; */
+    height: 18px;
+    width: 18px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 153px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.fileslistview .arrowright336 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : 20px;
+  width               : 10px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .fileformatdocumentmpvideoplayerextension, .subfoldersdiv .fileformatdocumentmpvideoplayerextension, .reportstab .fileformatdocumentmpvideoplayerextension {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 25px;
+  width               : 18px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  display: inline-block;
+    margin-top: 7px;
+}
+.fileslistview.selectedFilesDiv .fileformatdocumentmpvideoplayerextension {
+  background-color: rgba(255,255,255,0.0);
+  height: 25px;
+  width: 18px;
+  margin: 0;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  display: inline-block;
+  margin-top: 7px;
+  float: left;
+  margin-right: 15px;
+}
+.fileslistview .fileformatdocumentmpvideoplayerextension .svg2, .subfoldersdiv .fileformatdocumentmpvideoplayerextension .svg2, .reportstab .fileformatdocumentmpvideoplayerextension .svg2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 25px;
+  width               : 18px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .fileformatdocumentmpvideoplayerextension .svg2 .layer1, .subfoldersdiv .fileformatdocumentmpvideoplayerextension .svg2 .layer1, .reportstab .fileformatdocumentmpvideoplayerextension .svg2 .layer1  {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 24px;
+  width               : 18px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .fileformatdocumentmpvideoplayerextension .svg2 .layer1 .path5387, .subfoldersdiv .fileformatdocumentmpvideoplayerextension .svg2 .layer1 .path5387, .reportstab .fileformatdocumentmpvideoplayerextension .svg2 .layer1 .path5387 {
+      background-color: rgba(255,255,255,0.0);
+    top: -7px;
+    /* height: 36px; */
+    width: 38px;
+    position: absolute;
+    margin: 0;
+    left: -5px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.fileslistview .group4, .subfoldersdiv .group4, .reportstab .group4 {
+  background-color    : rgba(255,255,255,0.0);
+  /*height              : 38px;*/
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview.selectedFilesDiv .group4 {
+  background-color: rgba(255,255,255,0.0);
+  height: 38px;
+  margin: 0;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  float: left;
+  width: calc(100% - 65px);
+}
+.fileslistview .group4 .a400mbmodified3d, .subfoldersdiv .group4 .a400mbmodified3d, .reportstab .group4 .a400mbmodified3d {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : auto;
+  width               : auto;
+  /*position            : absolute;*/
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 13.0px;
+  color               : rgba(102, 102, 103, 1.0);
+  text-align          : left;
+  line-height         : 18.0px;
+}
+.fileslistview .group4 .interviewcientmp4, .subfoldersdiv .group4 .interviewcientmp4, .reportstab .group4 .interviewcientmp4 {
+  background-color: rgba(255,255,255,0.0);
+    top: 0px;
+    height: auto;
+    width: 100%;
+    /*position: absolute;*/
+    margin: 0;
+    left: 0px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-family: "Open Sans", Helvetica, Arial, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14.0px;
+    color: rgba(3, 3, 3, 1.0);
+    text-align: left;
+    line-height: 19.0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.fileslistview .more1, .subfoldersdiv .more1, .reportstab .more1 {
+    background-color: rgba(255,255,255,0.0);
+    height: 40px;
+    width: 40px;
+    /* margin: 0; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    /* margin: 0 auto; */
+    /* float: left; */
+    /* display: inline-block; */
+    /*margin-top: 10px;*/
+}
+.fileslistview .more1 .group, .subfoldersdiv .more1 .group, .reportstab .more1 .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 23px;
+  width               : 22px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .more1 .group .x377essentialicons, .subfoldersdiv .more1 .group .x377essentialicons, .reportstab .more1 .group .x377essentialicons{
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 22px;
+  width               : 22px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .more1 .group .x377essentialicons .moredetailsx283x29, .subfoldersdiv .more1 .group .x377essentialicons .moredetailsx283x29, .reportstab .more1 .group .x377essentialicons .moredetailsx283x29 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 22px;
+  width               : 22px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .fileListItem, .subfoldersdiv .fileListItem, .reportstab .fileListItem
+{
+  width: 100%;
+  max-width: 1170px;
+  transition: 0.5s;
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #e4e4e4;
+  clear: both;
+}
+.fileslistview .shape ,.subfoldersdiv .shape,.reportstab .shape{
+  background-color    : rgba(255,255,255,0.0);
+  height              : 28px;
+  width               : 27px;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  margin: 0 auto;
+  display: block;
+}
+.fileslistview .home {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.25px;
+  line-height         : 14.0px;
+}
+.fileslistview .files {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 10.0px;
+  color               : #000;
+  text-align          : center;
+  letter-spacing      : 0.25px;
+  line-height         : 14.0px;
+}
+.fileslistview .create {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.25px;
+  line-height         : 14.0px;
+}
+.fileslistview .reports {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.25px;
+  line-height         : 14.0px;
+}
+.fileslistview .account {
+  background-color    : rgba(255,255,255,0.0);
+  height              : auto;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Open Sans", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 10.0px;
+  color               : rgba(3, 3, 3, 1.0);
+  text-align          : center;
+  letter-spacing      : 0.25px;
+  line-height         : 14.0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+li {
+    padding: 0 !important;
+}
+li .wrapper {
+    display: block;
+    height: 100%;
+    width: auto;
+    position: relative;
+    -webkit-transition: -webkit-transform 300ms ease;
+    -moz-transition: -moz-transform 300ms ease;
+    transition: transform 300ms ease;
+}
+.wrapper .go, .wrapper .item, .wrapper .del {
+    display: inline-block;
+    padding: 0.9em;
+    text-shadow: none;
+    border-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.wrapper .item {
+    width: 100%;
+    height: 100%;
+}
+.wrapper .go, .wrapper .del {
+    height: 100%;
+    text-align:center;
+    font-weight: bold;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #ddd;
+}
+.wrapper .go {
+    background: #009925;
+    border-color: #009925;
+}
+.wrapper .del {
+    background: #F90101;
+    border-color: #F90101;
+}
+.fileslistview .filesiconview .path5387 {
+  background-color    : rgba(255,255,255,0.0);
+  height              : 98px;
+  width               : auto;
+  margin              : 0;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.fileslistview .filesiconview .fileformatdocumentmpvideoplayerextension {
+    background-color: rgba(255,255,255,0.0);
+    height: 99px;
+    width: 73px;
+    margin: 0;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin: 0 auto;
+    /* margin-left: 20px; */
+}
+.fileslistview .filterBar, .subfoldersdiv .filterBar, .reportstab .filterBar, .reportstab .filterBar {
+    height: 37px;
+    width: 100%;
+    background: #f7f7f7;
+    margin-top: -5px;
+    text-align: left;
+}
+.fileslistview .filesiconview .interviewclu2026mp4 {
+    background-color: rgba(255,255,255,0.0);
+    height: auto;
+    width: 100%;
+    margin: 0;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    font-family: "Open Sans", Helvetica, Arial, serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12.0px;
+    color: rgba(3, 3, 3, 1.0);
+    text-align: center;
+    line-height: 17.0px;
+    margin: 0 auto;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.fileslistview .filesiconview .moredetailsx283x29 {
+    background-color: rgba(255,255,255,0.0);
+    /* top: 0px; */
+    height: 22px;
+    width: 22px;
+    /* position: absolute; */
+    margin: 0;
+    /* left: 0px; */
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: 10px;
+}
+.fileslistview .filesiconview .row.iconList
+{
+  margin-top: 10px !important;
+}
+.fileslistview .filesiconview .iconItem
+{
+  margin-bottom: 25px;
+  max-height: 150px;
+  min-height: 150px;
+}
+.searchTextbox
+{
+  width: 100%;
+  background: none;
+  border: none;
+}
+.listViewButton
+{
+  cursor: pointer;
+  z-index: 32432432432423423;
+}
+.ListDeleteButtonRed, .ListFeleteFolderButtonRed, .ListDeleteButtonRedHome
+{
+  float: left;
+  position: absolute;
+  right: -87px;
+  /* left: 0; */
+  /* top: 0px; */
+  bottom: 0;
+  padding: 20px 20px 20px 20px;
+  background: red;
+  color: #fff;
+  font-size: 16px;
+  height: 100%;
+  border: 1px solid red;
+  display: none;
+}
+.fileListItem.leftSide, .homeRowItem.leftSide
+{
+  transition: 0.5s;
+  margin-left: -87px !important;
+  position: relative;
+}
+.ui-loader.ui-corner-all.ui-loader-default.ui-body-a {
+    display: none;
+}
+.ui-page.ui-page-theme-a.ui-page-active {
+    display: none;
+}
+.ui-page.ui-page-theme-a {
+    display: none;
+}

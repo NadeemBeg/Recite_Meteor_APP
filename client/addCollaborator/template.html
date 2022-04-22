@@ -1,0 +1,265 @@
+<template name="addCollaboratorpage">
+	<style type="text/css">
+					.selectedFilesDiv .container {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    margin-top: 8px;
+    width: auto;
+}
+
+/* Hide the browser's default checkbox */
+.selectedFilesDiv .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.selectedFilesDiv .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.selectedFilesDiv .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.selectedFilesDiv .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.selectedFilesDiv .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.selectedFilesDiv .container .checkmark:after {
+  left: 0px;
+  top: -5px;
+  width: 0px;
+  height: 0px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  color: #fff;
+}
+				</style>
+	<div class="addCollaboratorpage selectedFilesDiv">
+		<div class="collaborators">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center">
+					<div class="backbuttontopnav">
+		              <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+			        </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+              			Add Collaborator
+	          		</div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right backbuttontopnav">
+					<button class="blueButton margintop20">Cancel</button>
+				</div>
+			</div>
+			<div class="row contain">
+				<div class="col-xs-12 col-sm-12 text-center" style="margin-top: 10px;color: #444444;">
+					<label>Add Collaborators for Individual Project</label>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-center enterEmail" style="margin-top: 10px;" id="emailDiv">
+						<div style="width: 80%; float: left;">
+							<input class="typeEmail" type="text" name="recipientEmail" id="recipientEmail" placeholder="Enter email of recipient…">
+						</div>
+						<div style="width: 20%; float: left;">
+							<button class="addBtn" id="addEmailButton" style="">Add More</button>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-left enterEmail" style="margin-top: 10px;">
+						<div style="width: 100%; float: left;">
+							<p>* Email Addresses Separated by coma ( , ).</p>
+							<p style="text-align: center;">OR</p>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<!-- <p class="note">Email Addresses Separated by coma ( , )</p> -->
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-center searchContacts" style="margin-top: 10px;">
+						<div style="width: 80%; float: left;">
+							<input class="searchContact" type="text" name="searchContact" id="searchContact" placeholder="Search by Contact’s name…">
+						</div>
+						<div style="width: 20%; float: left;">
+							<button class="goBtn" style="">Go</button>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-center selectFiles" style="margin-top: 10px;">
+						<div style="width: 60%; float: left;">
+							<!-- <input class="selectFile" type="file" name="selectFile" placeholder="Choose Projects… "> -->
+							<div class="upload-btn-wrapper">
+							  
+							  <input class="searchContact uplodImgBtn" type="text" name="chooseProjects" id="chooseProjects" placeholder="Choose Projects…">
+							</div>
+						</div>
+						<div style="width: 20%; float: left;">
+							<button class="SelectBtn" >Select</button>
+						</div>
+						<div class="addMasterFolder" style="width: 20%; float: left;">
+							<img src="/img/plusc.png">
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 text-center" style="margin-top: 20px;color: #444444;padding-right: 95px;">
+					<label>Collaborator can: </label>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 viewCommentCheckbox" style="margin-top: 10px;">
+
+						<div style="width: 10%; float: left;">
+							<label class="container">
+							  <input type="radio" name="selectPermission" id="selectPermission" class="selectFiles" value="1">
+							  <span class="checkmark"></span>
+							</label>		
+						</div>
+						<div style="width: 90%; float: left;">
+							<label>View</label>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 viewCommentCheckbox" style="margin-top: 10px;">
+						<div style="width: 10%; float: left;">
+							<label class="container">
+							  <input type="radio" name="selectPermission" id="selectPermission" class="selectFiles" value="2">
+							  <span class="checkmark"></span>
+							</label>						
+						</div>
+						<div style="width: 90%; float: left;">
+							<label>Edit, Download & Upload</label>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 viewCommentCheckbox" style="margin-top: 10px;">
+						<div style="width: 10%; float: left;">
+							<label class="container">
+							  <input type="radio" name="selectPermission" id="selectPermission" class="selectFiles" value="3">
+							  <span class="checkmark"></span>
+							</label>					
+						</div>
+						<div style="width: 90%; float: left;">
+							<label>Project Admin (Full Access)</label>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 sendInviteCollaborator text-center">
+					<button class="sendInvite" id="sendInvite">Send Invite to Collaborate</button>
+				</div>
+				<div class="col-xs-12 col-sm-12 text-center" style="margin-top: 30px;color: #444444;">
+					<label>Add System Administrator for Full Access</label>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-center enterEmail" style="margin-top: 10px;">
+						<div style="width: 80%; float: left;">
+							<input class="typeEmail" type="text" name="systemAdminEmail" id="systemAdminEmail" placeholder="Enter email of recipient…">
+						</div>
+						<div style="width: 20%; float: left;">
+							<button class="sendBtn systemAdminButton" style="">Send</button>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+					<div class="col-xs-10 col-sm-8 col-md-4 col-lg-4 text-center enterEmail" style="margin-top: 10px;">
+						<div style="width: 100%; float: left;">
+							<p style="font-size: 13px;"> * This gives recipient the same controls as the owner. All files, projects and contacts connected to your account will be accessible & controllable by recipient.</p>
+						</div>
+					</div>
+					<div class="col-xs-1 col-sm-2 col-md-4 col-lg-4 text-left">
+						&nbsp;
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	{{> contactslistsearch}}
+	{{> projectslistsearch}}
+</template>

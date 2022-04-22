@@ -1,0 +1,356 @@
+<template name="createExport">
+	<div class="transitions-content createExportPageColor">
+		<div class="createExportPage">
+				<div class="row header">
+					<div class="col-xs-3 text-center">
+			            <a href="#"><img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/><div class="cancel">Cancel</div></a>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="namecase1">
+		                    Create Export
+		                </div>
+					</div>
+					<div class="col-xs-3 text-right">
+						<button type="button" class="savebtn" id="saveButton" disabled="true">
+		                    Save
+		                </button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="rectangle1">
+						<img src="/img/FileDocumentZipCompress.png" class="folder"/>
+						<div class="ryanfileslette">
+		                    <input type="text" name="newFolderName" id="newFolderName" class="newFolderName" placeholder="Zip Name">
+		                    <!-- <img src="/img/Close.png" class="emptyButton"/> -->
+		                </div>
+
+		            </div>
+				</div>
+		</div>
+	</div>
+</template>
+
+<!-- <template name="fileRename">
+	<div class="transitions-content">
+		<div class="createafolderfilled">
+				<div class="row header">
+					<div class="col-xs-3 text-center">
+			            <a href="#"><img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/><div class="cancel">Cancel</div></a>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="namecase1">
+		                    Rename
+		                </div>
+					</div>
+					<div class="col-xs-3 text-right">
+						<button type="button" class="create active" id="createFolderButton" disabled="true">
+		                    Save
+		                </button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="rectangle1">
+						<img src="/img/FolderIconBlue.png" class="folder"/>
+						<div class="ryanfileslette">
+		                    <input type="text" name="fileNameText" id="fileNameText" class="fileNameText" placeholder="File Name" value="{{getFileName}}">
+		                    <img src="/img/Close.png" class="emptyButton"/>
+		                </div>
+
+		            </div>
+				</div>
+		</div>
+	</div>
+</template> -->
+
+<template name="exportTo">
+	<div class="transitions-content">
+		<div class="copyto">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					<div class="backbuttontopnav">
+		               <button class="blueButton margintop20 cancelwitharrow">
+		                	<img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		                	Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Export To
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20" id="copyButon">Export</button>
+				</div>
+			</div>
+
+			<div class="row fileNameSection">
+				<div class="col-xs-12">
+					<p class="destination">
+						Choose a destination
+					</p>
+				</div>
+				<div class="col-xs-12 filename">
+					<label>File Name</label>
+					<!-- {{getFileData.fileName}} -->
+					Clarissa Important Files.zip
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select Contact</label>
+					</div>
+					<div class="rightSideSection addcontactdiv">
+						<img src="/img/contactAddIcon.png" class="icon addcontactdiv">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv selectContactDivSection">
+						<input type="text" placeholder="Search" id="contactTextBox"  name="contactTextBox">
+						<span class="searchIcon">
+							<!-- <img class="search" src="/img/SearchGlyph.png"/> -->
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<!-- <span class="micIcon">
+							<img class="dictation" src="/img/DictationGlyph.png"/>
+						</span> -->
+						<input type="hidden" name="copytoselectedcontactid" id="copytoselectedcontactid" value="">
+					</div>
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected" style="margin-top: 30px !important;">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select Project/Master Folder</label>
+					</div>
+					<div class="rightSideSection">
+						<img src="/img/FolderCreateIconsBlue.png" class="icon">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv selectContactMasterDivSection">
+						<input type="text" placeholder="Search" id="contactMasterFolderTextBox" name="contactMasterFolderTextBox">
+						<span class="searchIcon">
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<!-- <span class="micIcon">
+							<img class="dictation" src="/img/DictationGlyph.png"/>
+						</span> -->
+						<input type="hidden" name="copytoselectedcontactmasterfolderid" id="copytoselectedcontactmasterfolderid" value="">
+					</div>
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected"  style="margin-top: 30px !important;">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select Folder</label>
+					</div>
+					<div class="rightSideSection">
+						<img src="/img/FolderCreateIconsBlue.png" class="icon">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv selectContactMasterSubDivSection">
+						<input type="text" placeholder="Search" id="contactMasterSubFolderTextBox" name="contactMasterSubFolderTextBox">
+						<span class="searchIcon">
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<!-- <span class="micIcon">
+							<img class="dictation" src="/img/DictationGlyph.png"/>
+						</span> -->
+						<input type="hidden" name="copytoselectedcontactmastersubfolderid" id="copytoselectedcontactmastersubfolderid" value="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="exportTocontacts">
+	<div class="transitions-content">
+		<div class="copytocontacts">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					<div class="backbuttontopnav">
+		                <button class="blueButton margintop20 cancelwitharrow">
+		                	<img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		                	Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Export To
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20 doneButton">Done</button>
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected" style="margin-top: 10px !important;">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select User</label>
+					</div>
+					<div class="rightSideSection addContactsButton">
+						<img src="/img/contactAddIcon.png" class="icon addContactsButton">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv">
+						<input type="text" placeholder="Search" id="contactTextBox"  name="contactTextBox">
+						<span class="searchIcon">
+							<!-- <img class="search" src="/img/SearchGlyph.png"/> -->
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<span class="micIcon" id="clearTextBoxCopyToContacts">
+							<img class="dictation" src="/img/crossmark.png"/>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getContactsList}}
+					<ul>
+						{{#each getContactsList}}
+							<li class="contactItem" data-contactId="{{this._id}}">{{this.fullName}}
+								{{{isSelected this._id}}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Contacts Yet. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedContactId" id="selectedContactId" value="">
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="exportTocontactssmasterfolders">
+	<div class="transitions-content">
+		<div class="copytocontactsmasterfolders">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					<div class="backbuttontopnav">
+		                <button class="blueButton margintop20 cancelwitharrow">
+		                	<img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		                	Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Select Master Folder
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20 doneButton">Done</button>
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected" style="margin-top: 10px !important;">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select Master Folder</label>
+					</div>
+					<div class="rightSideSection addContactsButton">
+						<img src="/img/contactAddIcon.png" class="icon addContactsButton">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv">
+						<input type="text" placeholder="Search" id="contactTextBox"  name="contactTextBox">
+						<span class="searchIcon">
+							<!-- <img class="search" src="/img/SearchGlyph.png"/> -->
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<span class="micIcon" id="clearTextBoxCopyToContacts">
+							<img class="dictation" src="/img/crossmark.png"/>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getContactsMasterFolderList}}
+					<ul>
+						{{#each getContactsMasterFolderList}}
+							<li class="contactItem" data-contactMasterFolderId="{{this._id}}">{{this.folderName}}
+								{{{isSelected this._id}}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Master Folders Yet. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedContactMasterFolderId" id="selectedContactMasterFolderId" value="">
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="exportTocontactsmastersubfolders">
+	<div class="transitions-content">
+		<div class="copytocontactsmastersubfolders">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					<div class="backbuttontopnav">
+		                <button class="blueButton margintop20 cancelwitharrow">
+		                	<img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		                	Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Select Folder
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20 doneButton">Done</button>
+				</div>
+			</div>
+
+			<div class="row textBoxsSection selected" style="margin-top: 10px !important;">
+				<div class="col-xs-12">
+					<div class="leftSideSection">
+						<label>Select Folder</label>
+					</div>
+					<div class="rightSideSection addContactsButton">
+						<img src="/img/contactAddIcon.png" class="icon addContactsButton">
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="textboxDiv">
+						<input type="text" placeholder="Search" id="contactTextBox"  name="contactTextBox">
+						<span class="searchIcon">
+							<!-- <img class="search" src="/img/SearchGlyph.png"/> -->
+							<img class="search" src="/img/SearchGlyph.png"/>
+						</span>
+						<span class="micIcon" id="clearTextBoxCopyToContacts">
+							<img class="dictation" src="/img/crossmark.png"/>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getContactsMasterSubFolderList}}
+					<ul>
+						{{#each getContactsMasterSubFolderList}}
+							<li class="contactItem" data-contactMasterSubFolderId="{{this._id}}">{{this.folderName}}
+								{{{isSelected this._id}}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Folders Yet. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedContactMasterSubFolderId" id="selectedContactMasterSubFolderId" value="">
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,74 @@
+<template name="storageUpgrade">
+	<div class="transitions-content">
+		<div class="storageupgrade">
+			<div class="row topHeader">
+				<div class="col-xs-2 text-center">
+					<div class="backbuttontopnav">
+		               <button class="blueButton margintop20 cancelwitharrow">
+		                	<img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>
+		                </button>
+		            </div>
+				</div>
+				<div class="col-xs-8 text-center">
+					<div class="namecase1">
+	                    Upgrade Storage
+	                </div>
+				</div>
+				<div class="col-xs-2 text-right">
+					&nbsp;
+				</div>
+			</div>
+
+			<div class="row otherInformation">
+				{{#with getAccountType}}
+					<p class="accountType">{{this.type}} Account</p>
+					<p class="GBDetails"> - {{this.storage}} </p>
+				{{/with}}
+			</div>
+
+			<div class="row middleContent">
+				{{#if showUpgradeOptions}}
+				<div class="col-xs-12">
+					<div class="monthlySubscriptionButtonDiv">
+						<p class="buttonTitle">
+							Monthly Subscription
+						</p>
+						<p class="planDescription">
+							100 GB Storage
+						</p>
+						<p class="planPrice">
+							$9.99/month
+						</p>
+						<button class="monthlySubscriptionButton" data-type="monthly">
+							Upgrade
+						</button>
+					</div>
+				</div>
+
+				<div class="col-xs-12">
+					<div class="monthlySubscriptionButtonDiv yearlySubscriptionButtonDiv">
+						<p class="buttonTitle">
+							Yearly Subscription
+						</p>
+						<p class="planDescription">
+							Unlimited Storage
+						</p>
+						<p class="planPrice">
+							$99.99/year
+						</p>
+						<button class="monthlySubscriptionButton" data-type="yearly">
+							Upgrade
+						</button>
+					</div>
+				</div>
+				{{/if}}
+
+				<div class="col-xs-12 text-center">
+					<button id="deleteAccountButton">
+						Delete Account
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

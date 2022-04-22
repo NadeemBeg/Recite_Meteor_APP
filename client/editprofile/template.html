@@ -1,0 +1,214 @@
+<template name="editprofile">
+	<div class="transitions-content">
+		<div class="editprofilerecite">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center nopadding">
+					<div class="backbuttontopnav">
+		                
+		                <button class="blueButton margintop20" id="editProfileCancelButton"><img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png" id="backArrow"/>Cancel</button>
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Edit Profile
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20"  id="editProfileSaveButton">Save</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading" style="text-align: center;">
+					The Essentials
+				</div>
+				<div class="col-xs-12 nopadding borderBottom">
+					<div class="profilePhotoDiv">
+						<img src="{{getProfilePic}}" class="img-responsive profilePic">
+						<img src="/img/CameraButtonIconEdit.png" class="img-responsive cameraUploadeButton" />
+						<input type="file" class="" name="selectOverlayFile" id="selectOverlayFile" accept="image/*">
+						<input type="hidden" class="" name="selectOverlayFileHidden" id="selectOverlayFileHidden" value="">
+					</div>
+					<div class="rightFields">
+						<div class="textBoxItem borderBottom">
+							<label> First Name: </label>
+							<input type="text" name="firstName" id="firstName" class="textboxEditProfile" value="{{getUserName.firstName}}">
+						</div>
+						<div class="textBoxItem borderBottom">
+							<label> Last Name: </label>
+							<input type="text" name="lastName" id="lastName" class="textboxEditProfile" value="{{getUserName.lastName}}">
+						</div>
+						<div class="textBoxItem borderBottom">
+							<label> Personal Email: </label>
+							<input type="text" name="personalEmail" id="personalEmail" class="textboxEditProfile" value="{{getUserDetails.username}}" readonly="">
+						</div>
+						<div class="textBoxItem">
+							<label> Company Email: </label>
+							<input type="text" name="companyEmail" id="companyEmail" class="textboxEditProfile" value="{{getUserDetails.profile.companyEmail}}" placeholder="optional">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-xs-4 col-lg-2 col-md-2 col-sm-2" style="padding-top: 10px;">
+					<div class="profilePhotoDiv">
+						<img src="{{getProfilePic}}" class="img-responsive profilePic">
+						<img src="/img/CameraButtonIconEdit.png" class="img-responsive cameraUploadeButton" />
+						<input type="file" class="" name="selectOverlayFile" id="selectOverlayFile" accept="image/*">
+						<input type="hidden" class="" name="selectOverlayFileHidden" id="selectOverlayFileHidden" value="">
+					</div>
+				</div>
+				<div class="col-xs-8 col-lg-10 col-md-10 col-sm-10">
+					<div class="textBoxItem">
+						<label> First Name: </label>
+						<input type="text" name="firstName" id="firstName" class="textboxEditProfile" value="{{getUserName.firstName}}">
+					</div>
+					<div class="textBoxItem">
+						<label> Last Name: </label>
+						<input type="text" name="lastName" id="lastName" class="textboxEditProfile" value="{{getUserName.lastName}}">
+					</div>
+					<div class="textBoxItem">
+						<label> Personal Email: </label>
+						<input type="text" name="personalEmail" id="personalEmail" class="textboxEditProfile" value="{{getUserDetails.username}}">
+					</div>
+					<div class="textBoxItem">
+						<label> Company Email: </label>
+						<input type="text" name="companyEmail" id="companyEmail" class="textboxEditProfile" value="{{getUserDetails.profile.companyEmail}}">
+					</div>
+				</div> -->
+				<div class="col-xs-12">
+					<div class="textBoxItem">
+						<label> Job Title: </label>
+						<input type="text" name="jobTitle" id="jobTitle" class="textboxEditProfile" value="{{getUserDetails.profile.jobTitle}}">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading">
+					Phone Numbers
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem borderBottom padding15 nopadding">
+						<label> Office: </label>
+						<input type="text" name="officeNumber" id="officeNumber" class="textboxEditProfile phonenumbermask" value="{{getUserDetails.profile.phoneNumberOffice}}" placeholder="optional" data-inputmask="'mask': '(999)-999-9999'" inputmode="numeric">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem borderBottom padding15">
+						<label> Office Ext.: </label>
+						<input type="text" name="officeExtNumber" id="officeExtNumber" class="textboxEditProfile phonenumbermask" value="{{getUserDetails.profile.phoneNumberOfficeExt}}" placeholder="optional" data-inputmask="'mask': '(999)-999-9999'"  inputmode="numeric">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem borderBottom padding15">
+						<label> Cell/Mobile: </label>
+						<input type="text" name="mobileNumber" id="mobileNumber" class="textboxEditProfile phonenumbermask" value="{{getUserDetails.profile.phoneNumber}}" placeholder="optional" data-inputmask="'mask': '(999)-999-9999'"  inputmode="numeric">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem borderBottom padding15">
+						<label> Home: </label>
+						<input type="text" name="homeNumber" id="homeNumber" class="textboxEditProfile phonenumbermask" value="{{getUserDetails.profile.phoneNumberHome}}" placeholder="optional" data-inputmask="'mask': '(999)-999-9999'"  inputmode="numeric">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15">
+						<label> Fax: </label>
+						<input type="text" name="faxNumber" id="faxNumber" class="textboxEditProfile phonenumbermask" value="{{getUserDetails.profile.phoneNumberFax}}" placeholder="optional" data-inputmask="'mask': '(999)-999-9999'"  inputmode="numeric">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading">
+					Address
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Line 1: </label>
+						<input type="text" name="line1" id="line1" class="textboxEditProfile" value="{{getUserDetails.profile.addressLine1}}" placeholder="optional">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Line 2: </label>
+						<input type="text" name="line2" id="line2" class="textboxEditProfile" value="{{getUserDetails.profile.addressLine2}}" placeholder="optional">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> City: </label>
+						<input type="text" name="city" id="city" class="textboxEditProfile" value="{{getUserDetails.profile.addressCity}}" placeholder="optional">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> State: </label>
+						<input type="text" name="state" id="state" class="textboxEditProfile" value="{{getUserDetails.profile.addressState}}" placeholder="optional">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Post Code: </label>
+						<input type="text" name="zipCode" id="zipCode" class="textboxEditProfile" value="{{getUserDetails.profile.addressZip}}" placeholder="optional" inputmode="numeric" maxlength="6" minlength="5">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15">
+						<label> Country: </label>
+						<input type="text" name="country" id="country" class="textboxEditProfile" value="{{getUserDetails.profile.addressCountry}}" placeholder="optional">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading">
+					Public Profile
+				</div>
+				<div class="col-xs-12">
+					<textarea name="publicProfile" id="publicProfile" placeholder="Public profile - Visible to all users" class="textareaEditProfile" >{{getUserDetails.profile.publicNotes}}</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading">
+					Private Notes
+				</div>
+				<div class="col-xs-12">
+					<textarea namr="privateNotes" id="privateNotes" placeholder="Not visible to users" class="textareaEditProfile">{{getUserDetails.profile.privateNotes}}</textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 heading ">
+					Social
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Facebook: </label>
+						<input type="text" name="facebook" id="facebook" class="textboxEditProfile" placeholder="@TribeAppsLLC" value="{{getUserDetails.profile.socialFacebook}}">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> LinkedIn: </label>
+						<input type="text" name="linkedin" id="linkedin" class="textboxEditProfile" placeholder="@TribeAppsLLC" value="{{getUserDetails.profile.socialLinkedIn}}">
+					</div>
+				</div>
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Twitter: </label>
+						<input type="text" name="twitter" id="twitter" placeholder="@TribeAppsLLC" class="textboxEditProfile" value="{{getUserDetails.profile.socialTwitter}}">
+					</div>
+				</div>
+				
+				<!-- <div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15 borderBottom">
+						<label> Google+: </label>
+						<input type="text" name="google" id="google" class="textboxEditProfile" value="{{getUserDetails.profile.socialGoogle}}">
+					</div>
+				</div> -->
+				
+				<div class="col-xs-12 nopadding">
+					<div class="textBoxItem padding15">
+						<label> Website: </label>
+						<input type="text" name="website" id="website" placeholder="TribeApps.com" class="textboxEditProfile" value="{{getUserDetails.profile.socialWebsite}}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

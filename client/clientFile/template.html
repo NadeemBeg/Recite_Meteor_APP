@@ -1,0 +1,198 @@
+<template name="clientFile">
+	<div class="transitions-content">
+		<div class="clientfileexample">
+			<div class="row topSection">
+				<div class="col-xs-2">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div>
+				</div>
+				<div class="col-xs-8 text-center">
+					<div class="topnavbarrecite2">
+		                <div class="rectangle21">
+		                </div>
+		                <div class="namecase1">
+		                    File Details
+		                </div>
+		            </div>
+				</div>
+				<div class="col-xs-2">
+					&nbsp;
+				</div>
+			</div>
+			<div class="row fileNameSection">
+				<div class="col-xs-12 text-center">
+					<img  class="path5133" src=""/>
+				</div>
+				<div class="col-xs-12 text-center">
+					<div class="openremarksdoc">
+		                {{getFileDetails.fileName}}
+		            </div>
+		            <p class="text-center">
+		            	{{#if isFileImage}}
+		            		<a href="#" class="previewImageFile">Preview Image</a>
+		            	{{/if}}
+		            	{{#if isFileVideo}}
+		            		<a href="#" class="previewVideoFile">Preview Video</a>
+		            	{{/if}}
+		            </p>
+				</div>
+			</div>
+			<div class="row extraInfoSection">
+				<div class="row">
+				<div class="col-xs-12 text-center pad0">
+					<div class="rectangle-layout-container">
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Tags:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8 text-left">
+		                		{{#if getTagsList}}
+		                			{{#each getTagsList}}
+		                				<div class="tagDiv">
+		                					<span id="tagText" style="color:#{{this.tagColor}}">
+		                						{{this.tagText}}
+		                					</span>
+		                					<span class="removeTag" data-tagid="{{this._id}}">X</span>
+		                				</div>
+		                			{{/each}}
+		                		{{/if}}
+	                			<div class="addatagu2026" id="addTag">
+					                Add a tag…
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Size:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026">
+					                {{getFileSize getFileDetails.fileSize}}
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Version:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026">
+					                1
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Project:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026" style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">
+					                {{foldername getFileDetails}}
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Uploaded By:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026">
+		                			{{getUploadedByText getFileDetails}}
+		                			<!-- Clarrissa V., on 2:43PM, Wed 7th Nov 2018 -->
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Access:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026">
+					                -
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Following:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026">
+					                -
+					            </div>
+		                	</div>
+		                </div>
+
+		                <div class="row rectangle">
+		                	<div class="col-xs-4">
+		                		<div class="tags">
+					                Link:
+					            </div>
+		                	</div>
+		                	<div class="col-xs-8">
+		                		<div class="addatagu2026" id="copyToClipBoard" data-id="{{getFileDetails.fileUrl}}">
+					                Tap to copy link in clipboard
+					                <input type="text" value="{{getFileDetails.fileUrl}}" id="myInput" class="" style="border:0;color: #f7f7f7; background-color: #f7f7f7; height: 0px;"> <!-- style="opacity:0;height:0px;width:0px;visibility: hidden;" -->
+					            </div>
+		                	</div>
+		                </div>
+
+		                
+		            </div>
+				</div>
+			</div>
+			<div class="row">
+				{{#if totalComment}}
+					<div class="showComments">
+						<div class="col-xs-12">Comments:-</div>					
+					</div>
+					{{#each totalComment}}
+						<div class="col-xs-4" style="font-size: 13px !important;">
+			        		<div class="tags showCommentsUserName">
+				                {{userName this.userId}}
+				            </div>
+			        	</div>
+			        	<div class="col-xs-8" style="font-size: 13px !important;">
+			        		<div class="tags showCommentsTag">
+				               {{this.comments}}
+				            </div>
+			        	</div>
+		        	{{/each}}
+	        	{{/if}}
+			</div>
+			</div>
+			
+			{{#if isAllowedComment}}
+				<div class="row rectangle1 buttomSection">
+					<div class="col-xs-12">
+						<form>
+							<input type="text" name="fileCommentTextBox" id="fileCommentTextBox" placeholder="Add a comment...." class="textBoxComment">
+							<button class="buttonClassComment fileCommentPostButton">Post</button>
+						</form>
+					</div>
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</template>

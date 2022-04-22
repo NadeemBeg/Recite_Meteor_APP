@@ -1,0 +1,458 @@
+<template name="contactslist">
+	<div class="transitions-content">
+		<div class="copytocontacts">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					<div class="backbuttontopnav">
+		                &nbsp;
+		            </div>
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Contacts List
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					&nbsp;
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getContactsList}}
+					<ul>
+						{{#each getContactsList}}
+							<li class="contactItem" data-contactId="{{this._id}}">{{this.fullName}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Contacts Yet. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedContactId" id="selectedContactId" value="">
+			</div>
+			{{> tabs}}
+		</div>
+	</div>
+</template>
+
+
+<template name="contactslistsearch">
+	<style type="text/css">
+					.contactslistsearch .container {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    
+    width: auto;
+}
+
+/* Hide the browser's default checkbox */
+.contactslistsearch .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.contactslistsearch .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.contactslistsearch .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.contactslistsearch .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.contactslistsearch .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.contactslistsearch .container .checkmark:after {
+  left: 3px;
+  top: -3px;
+  width: 0px;
+  height: 0px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  color: #fff;
+}
+				</style>
+	
+		<div class="copytocontacts contactslistsearch">
+			<div class="row topHeader"> 
+				<div class="col-xs-4 text-center">
+					&nbsp;
+				</div>        
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Contacts
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20" id="doneButton">Done</button>
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getContactsList}}
+					<ul>
+						{{#each getContactsList}}
+							<li class="contactItem" data-contactId="{{this._id}}">
+								<label class="container">
+								  <input type="checkbox" name="selectContacts" id="selectContacts" class="selectFiles contactsSelectedInput {{this._id}}" data-id="{{this._id}}" {{isSelected this._id}}>
+								  <span class="checkmark"></span>
+								</label> {{this.fullName}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Contacts Found. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedContactId" id="selectedContactId" value="">
+			</div>
+			
+		</div>
+	
+</template>
+
+<template name="projectslistsearch">
+	<style type="text/css">
+					.projectlistsearch .container {
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* user-select: none; */
+    display: -webkit-inline-box;
+    float: left;
+    
+    width: auto;
+}
+
+/* Hide the browser's default checkbox */
+.projectlistsearch .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.projectlistsearch .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.projectlistsearch .container input:checked ~ .checkmark {
+  background-color: #66BFE1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.projectlistsearch .checkmark:after {
+  content: "\2713";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.projectlistsearch .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.projectlistsearch .container .checkmark:after {
+  left: 3px;
+  top: -3px;
+  width: 0px;
+  height: 0px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+  color: #fff;
+}
+				</style>
+	
+		<div class="copytocontacts projectlistsearch">
+			<div class="row topHeader">
+				<div class="col-xs-4 text-center">
+					&nbsp;
+				</div>
+				<div class="col-xs-4 text-center">
+					<div class="namecase1">
+	                    Projects
+	                </div>
+				</div>
+				<div class="col-xs-4 text-right">
+					<button class="blueButton margintop20" id="doneButton">Done</button>
+				</div>
+			</div>
+
+			<div class="row contactsListSection">
+				{{#if getProjectsList}}
+					<ul>
+						{{#each getProjectsList}}
+							<li class="contactItem projectItem" data-contactId="{{this._id}}">
+								<label class="container">
+								  <input type="checkbox" name="selectProjects" id="selectProjects" class="selectFiles projectsSelectedInput {{this._id}}" data-id="{{this._id}}" {{isSelected this._id}}>
+								  <span class="checkmark"></span>
+								</label> {{this.folderName}}
+							</li>
+						{{/each}}
+					</ul>
+				{{else}}
+					<h4 class="norecords"> No Projects Found. </h4>
+				{{/if}}
+				<input type="hidden" name="selectedProjectsId" id="selectedProjectsId" value="">
+			</div>			
+		</div>	
+</template>
+
+<!-- <template name="selectForCopyFiles">
+	<style type="text/css">
+		.copytocontacts.filesForCopy{
+			height: 90%;
+			width: 90%;
+		}
+		.filesForCopy .container {
+		    display: block;
+		    position: relative;
+		    padding-left: 15px;
+		    margin-bottom: 12px;
+		    cursor: pointer;
+		    font-size: 22px;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    /* user-select: none; */
+		    display: -webkit-inline-box;
+		    float: left;    
+		    width: auto;
+		}
+
+		/* Hide the browser's default checkbox */
+		.filesForCopy .container input {
+		  position: absolute;
+		  opacity: 0;
+		  cursor: pointer;
+		  height: 0;
+		  width: 0;
+		}
+
+		/* Create a custom checkbox */
+		.filesForCopy .checkmark {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 25px;
+		  width: 25px;
+		  background-color: #eee;
+		}
+
+		/* On mouse-over, add a grey background color */
+
+
+		/* When the checkbox is checked, add a blue background */
+		.filesForCopy .container input:checked ~ .checkmark {
+		  background-color: #66BFE1;
+		}
+
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.filesForCopy .checkmark:after {
+		  content: "\2713";
+		  position: absolute;
+		  display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.filesForCopy .container input:checked ~ .checkmark:after {
+		  display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.filesForCopy .container .checkmark:after {
+		  left: 3px;
+		  top: -3px;
+		  width: 0px;
+		  height: 0px;
+		  border: solid white;
+		  border-width: 0 3px 3px 0;
+		  -webkit-transform: rotate(360deg);
+		  -ms-transform: rotate(360deg);
+		  transform: rotate(360deg);
+		  color: #fff;
+		}
+	</style>	
+	<div class="copytocontacts filesForCopy">
+		<div class="row topHeader">
+			<div class="col-xs-4 text-center">
+				&nbsp;
+			</div>
+			<div class="col-xs-4 text-center">
+				<div class="namecase1">
+                    Projects
+                </div>
+			</div>
+			<div class="col-xs-4 text-right">
+				<button class="blueButton margintop20" id="doneButton">Done</button>
+			</div>
+		</div>
+	</div>
+	
+</template> -->
+<template name="selectForCopyFiles">
+	<style type="text/css">
+		.copytocontacts.filesForCopy{
+			height: 90%;
+			width: 90%;
+		}
+		.filesForCopy .container {
+		    display: block;
+		    position: relative;
+		    padding-left: 15px;
+		    margin-bottom: 12px;
+		    cursor: pointer;
+		    font-size: 22px;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    /* user-select: none; */
+		    display: -webkit-inline-box;
+		    float: left;    
+		    width: auto;
+		}
+
+		/* Hide the browser's default checkbox */
+		.filesForCopy .container input {
+		  position: absolute;
+		  opacity: 0;
+		  cursor: pointer;
+		  height: 0;
+		  width: 0;
+		}
+
+		/* Create a custom checkbox */
+		.filesForCopy .checkmark {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 25px;
+		  width: 25px;
+		  background-color: #eee;
+		}
+
+		/* On mouse-over, add a grey background color */
+
+
+		/* When the checkbox is checked, add a blue background */
+		.filesForCopy .container input:checked ~ .checkmark {
+		  background-color: #66BFE1;
+		}
+
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.filesForCopy .checkmark:after {
+		  content: "\2713";
+		  position: absolute;
+		  display: none;
+		}
+
+		/* Show the checkmark when checked */
+		.filesForCopy .container input:checked ~ .checkmark:after {
+		  display: block;
+		}
+
+		/* Style the checkmark/indicator */
+		.filesForCopy .container .checkmark:after {
+		  left: 3px;
+		  top: -3px;
+		  width: 0px;
+		  height: 0px;
+		  border: solid white;
+		  border-width: 0 3px 3px 0;
+		  -webkit-transform: rotate(360deg);
+		  -ms-transform: rotate(360deg);
+		  transform: rotate(360deg);
+		  color: #fff;
+		}
+	</style>	
+	<div class="copytocontacts filesForCopy">
+		<div class="row topHeader">
+			<div class="col-xs-4 text-center">
+				&nbsp;
+			</div>
+			<div class="col-xs-4 text-center">
+				<div class="namecase1">
+                    Projects
+                </div>
+			</div>
+			<div class="col-xs-4 text-right">
+				<button class="blueButton margintop20" id="doneButton">Done</button>
+			</div>
+		</div>
+		<div class="row contactsListSection">
+			{{#if getFiles}}
+				{{#each getFiles}}
+					<div class="group4 fileNameMiddle">
+						<div class="interviewcientmp4 " data-id="{{this._id}}">		                    
+		                    <input type="checkbox"/>
+							<label>{{this.fileName}}</label>
+		                    <!-- <img class="width18 {{#if isNotStarred this._id}} hidden {{/if}} gotoFileDetails" src="/img/fileslistselect-star@2x.png"  data-id="{{this._id}}"> -->
+		                </div>
+		                <!-- <div class="a400mbmodified3d gotoFileDetails"  data-id="{{this._id}}">
+		                    {{getSize this.fileSize}}, modified {{getModifiedDate this.dateModified}}
+		                </div> -->
+		            </div>					
+				{{/each}}
+			{{else}}
+				<h4 class="norecords"> No File Found. </h4>
+			{{/if}}
+			<input type="hidden" name="selectedProjectsId" id="selectedProjectsId" value="">
+		</div>			
+	</div>	
+</template>

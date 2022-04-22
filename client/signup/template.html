@@ -1,0 +1,112 @@
+<template name="appSignup">
+	<div class="transitions-content">
+		<div class="signup">
+			<a href="/"><img class="arrowright336" src="/img/reset-password-arrowright-336@2x.png"/></a>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<img src="/images/Recite_logo_tagline_RGB.png" class="logo"/>
+				</div>
+				<div class="col-xs-12 text-center">
+					<div class="signup1-layout-container">
+		                <div class="signup1">
+		                    Sign Up
+		                </div>
+		            </div>
+				</div>
+				<form>
+					<div class="col-xs-12 text-center">
+						<div class="group2-layout-container">
+			                <div class="group2">
+			                    <div class="rectangle7"></div>
+			                    <input autocomplete="off" class="textfullname isRequired" name="textFullName" id="textFullName" placeholder="Full Name"/>
+			                    <i class="fa fa-exclamation-circle" style="display: none;"></i>
+			                </div>
+			            </div>
+					</div>
+					<div class="col-xs-12 text-center">
+						<div class="group3-layout-container">
+			                <div class="group3">
+			                    <div class="rectangle7">
+			                    </div>
+			                    <input autocomplete="off" class="textphonenumber isRequired" name="textPhoneNumber" id="textPhoneNumber" placeholder="Phone number" data-inputmask="'mask': '(999)-999-9999'"  inputmode="numeric"/>
+			                    <i class="fa fa-exclamation-circle" style="display: none;"></i>
+			                </div>
+			            </div>
+					</div>
+					<div class="col-xs-12 text-center">
+						<div class="group4-layout-container">
+			                <div class="group4">
+			                    <div class="rectangle7">
+			                    </div>
+			                    <input autocomplete="off" class="textemailaddress isRequired" name="textEmailAddress" id="textEmailAddress" placeholder="Email address"/>
+			                    <i class="fa fa-exclamation-circle" style="display: none;"></i>
+			                </div>
+			            </div>
+			        </div>
+			        <div class="col-xs-12 text-center">
+			        	<div class="group5-layout-container">
+				            <div class="group5">
+				                <div class="rectangle7">
+				                </div>
+				                <input autocomplete="off" type="password" class="textpassword isRequired" name="textPassword" id="textPassword" placeholder="Password"/>
+				                <i class="fa fa-exclamation-circle" style="display: none;"></i>
+				            </div>
+			        	</div>
+		        	</div>
+		        	<div class="col-xs-12 text-center">
+		        		<div class="group6-layout-container">
+				            <div class="group6">
+				                <div class="rectangle7">
+				                </div>
+				                <input autocomplete="off" type="password" class="textconfirmpassword isRequired" name="textConfirmPassword" id="textConfirmPassword" placeholder="Confirm Password"/>
+				                <i class="fa fa-exclamation-circle" style="display: none;"></i>
+				            </div>
+			        	</div>
+			        </div>
+			        
+			        <div class="col-xs-12 text-center">
+			        	<div class="group7-layout-container">
+					        <div class="submitbuttonteal">
+				                <div class="rec2">
+				                </div>
+				                <button class="login" id="signupButton" style="cursor: pointer">Submit</button>
+				            </div>
+				        </div>
+		        	</div>
+	        	</form>
+	        	<div class="col-xs-12 text-center">
+		        	<div class="byusingthisappi-layout-container">
+		                <div class="byusingthisappi">
+		                    <span class="span1">By using this app, I agree to the </span><br><span class="span3 termsAndConditions">Terms of Use</span> & <span class="span3 privacyPolicyPoP">Privacy Policy</span>
+		                </div>
+		            </div>
+	        	</div>
+	        	<div class="col-xs-12 text-center">
+		        	<div class="facebookbutton-layout-container">
+		                <div class="facebookbutton">
+		                    <div class="rectangle">
+		                    </div>
+		                    <div class="signinwithfaceboo" id="facebookLogin">
+		                        Sign up with Facebook
+		                    </div>
+		                </div>
+		            </div>
+		            <!-- <div class="googlebutton-layout-container">
+		                <div class="googlebutton">
+		                    <div class="rectangle">
+		                    </div>
+		                    <div class="signinwithgoogle-layout-container">
+		                        <div class="signinwithgoogle" id="googleLogin">
+		                            Sign up with Google+
+		                        </div>
+		                    </div>
+		                </div>
+		            </div> -->
+		        </div>
+			</div>
+	    </div>
+	</div>
+	<!-- {{> termsConditions}} -->
+	{{> privacyPolicy}}
+    {{> termsConditions}}
+</template>

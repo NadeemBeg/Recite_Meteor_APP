@@ -1,0 +1,115 @@
+<template name="appLogin">
+    <div class="transitions-content">
+    	<div class="signin">
+    		<div class="row">
+    			<div class="col-xs-12 text-center">
+                    <img src="/images/Recite_logo_tagline_RGB.png" class="logo"/>
+                </div>
+                <!-- <div class="col-xs-12 text-center">
+                    <div class="signin1-layout-container">
+                        <div class="signin1">
+                            Sign In
+                        </div>
+                    </div>
+                </div> -->
+                <form>
+                    <div class="col-xs-12 text-center">
+                        <div class="textinputwhite-layout-container">
+                            <div class="textinputwhite">
+                                <div class="rectangle">
+                                </div>
+                                <div class="emailaddress">
+                                    <input class="textemailaddress isRequired" name="userEmailAddress" id="userEmailAddress" placeholder="Email Address"/>
+                                    <i class="fa fa-exclamation-circle" style="display: none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <div class="textinputwhite1-layout-container">
+                            <div class="textinputwhite1">
+                                <div class="rectangle">
+                                </div>
+                                <div class="emailaddress">
+                                    <input type="password" password class="textemailaddress isRequired" name="userPassword" placeholder="Password" id="userPassword"/>
+                                    <i class="fa fa-exclamation-circle" style="display: none;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <div class="submitbuttonteal-layout-container">
+                            <div class="submitbuttonteal"  id="loginButton">
+                                <div class="rec2">
+                                </div>
+                                
+                                    <button class="login">Login</button>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-xs-12 text-center">
+                    <div class="byusingthisappi-layout-container">
+                        <div class="byusingthisappi">
+                            By using this app, I agree to the<br> <span class="span3 termsAndConditions">Terms of Use</span> & <span class="span3 privacyPolicyPoP">Privacy Policy</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xs-12 text-center">
+                    <div class="continueasguest-layout-container">
+                        <div class="continueasguest">
+                            Continue as Guest
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-xs-12 text-center">
+                    <div class="donu2019thaveanaccoun-layout-container">
+                        <div class="donu2019thaveanaccoun">
+                            <a href="/signup" class="white-color">Don’t have an account?</a>
+                        </div>     
+                    </div>
+                </div> -->
+                <div class="col-xs-12 text-center">
+                    <div class="signup-layout-container">
+                        <div class="signup minHeight">
+                           <a href="/signup" class="white-color">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <div class="forgetpassword-layout-container">
+                        <div class="forgetpassword">
+                            <a href="/reset-password" class="white-color">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <div class="facebookbutton-layout-container">
+                        <div class="facebookbutton">
+                            <div class="rectangle">
+                            </div>
+                            <div class="signinwithfaceboo" id="facebookLogin">
+                                Sign in with Facebook
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="googlebutton-layout-container">
+                        <div class="googlebutton">
+                            <div class="rectangle">
+                            </div>
+                            <div class="signinwithgoogle-layout-container">
+                                <div class="signinwithgoogle" id="googleLogin">
+                                    Sign in with Google+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+    		</div>
+    	</div>
+    </div>
+    {{> privacyPolicy}}
+    {{> termsConditions}}
+</template>

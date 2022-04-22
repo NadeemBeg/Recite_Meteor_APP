@@ -1,0 +1,85 @@
+<template name="inviteContact">
+	<div class="transitions-content">
+		<div class="invitecontact">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+	                    Invite Contact
+	                </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right donebtn">
+					<button class="blueButton margintop20">Done</button>
+				</div>
+			</div>
+			<div class="middleContent margintop20">
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<p class="inviteCountMessage">{{getContactCountsNotYetInApp}} contacts not yet on Recite</p>
+						{{#if showSearchBar}}
+						<input type="text" name="searchTextBox" id="searchTextBoxInvite" class="searchTextBox" placeholder="Search">
+						<img src="/img/SearchGlyph.png" class="eyeGlass" />
+						{{/if}}
+						<!-- <img src="/img/DictationGlyph.png" class="mikeIcon" /> -->
+					</div>
+				</div>
+				<div class="row inviteRowsDiv">
+					{{#if getContactList}}
+						{{#each getContactList}}
+							<div class="col-xs-12 inviteRow">
+								<div class="iconDiv">
+									{{#if this.contactImage}}
+										<!-- <img src="{{this.contactImage}}" width="50" /> -->
+										<img src="/img/UserIconNewDefault.png" width="50" />
+									{{else}}
+										<img src="/img/UserIconNewDefault.png" width="50" />
+									{{/if}}
+									
+								</div>
+								<div class="inviteNameDiv">
+									<p class="name">
+										{{this.contactName}}
+									</p>
+									{{#if this.contactPersonalEmail}}
+										<p class="email">
+											{{this.contactPersonalEmail}}
+										</p>
+									{{else}}
+										{{#if this.contactNumber}}
+											<p class="email">
+												{{this.contactNumber}}
+											</p>
+										{{/if}}
+									{{/if}}
+								</div>
+								<div class="addDiv">
+									<!-- <button class="blueButton inviteButton" data-phone="{{this.contactNumber}}">Invite</button> -->
+									{{#if isInvited this.contactNumber}}
+										<button class="blueButton invitedButton" data-phone="{{this.contactNumber}}">Invited</button>
+									{{/if}}
+									{{#if noInvited this.contactNumber}}
+										<button class="blueButton inviteButton" data-phone="{{this.contactNumber}}" data-email="{{this.contactPersonalEmail}}">Invite</button>
+									{{/if}}
+									
+								</div>
+							</div>
+						{{/each}}
+					{{else}}
+						<div class="text-center">
+							<h4>No contacts yet.</h4>
+						</div>
+					{{/if}}
+				</div>
+				<!-- {{#if showSearchBar}}
+				<div class="row inviteButtonDiv">
+					<button class="allInviteButton">Invite All {{getContactCountsNotYetInApp}} to Recite</button>
+				</div>
+				{{/if}} -->
+			</div>
+		</div>
+	</div>
+</template>

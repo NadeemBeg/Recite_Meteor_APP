@@ -1,0 +1,210 @@
+<template name="payment">
+	<div class="transitions-content">
+		<div class="payment">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center nopadding">
+					<div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+              Payment
+          </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right">
+					<!-- <button class="blueButton margintop20">Cancel</button> -->
+				</div>
+			</div>
+			<div class="row paymentOptions">
+				<div class="col-xs-12 col-sm-12 paymentWithCard">
+					<button class="cardPayment">Add Card</button>					
+				</div>
+				<div class="col-xs-12" style="border-bottom: 2px solid #d8d8d8;"></div>
+				<!-- {{#if isIOS}}
+				<div class="col-xs-12 col-sm-12 paymentWithApplePay">
+					<img class="applePayImg" src="/img/apple-pay_102864.png">
+				</div>
+				{{/if}} -->
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="cardPaymentPage">
+	<div class="transitions-content">
+		<div class="cardPaymentPage">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center">
+					<div class="col-xs-3 col-sm-2 text-left">
+						<img class="arrowright336" style="left: 0px;" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+						<button class="blueButton margintop20 backbuttontopnav">Cancel</button>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+             Add Card
+          </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right ">
+					<button class="blueButton margintop20 saveCardDetials">Save</button>
+				</div>
+			</div>
+			<div class="row paymentTypes">
+				<div class="col-xs-12 text-center">
+					<img class="discover-card-payment img-responsive" src="/img/06-The-Four-Major-Credit-Card-Networks-also-showcase.png">
+				</div>
+			</div>
+			<div class="row cardDetials">
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="Card Holder Name" type="text" class="form-control isRequired" id="holderName" value="">
+            <span class="material-input"></span>
+          </div>
+				</div>
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="Credit Card Number" type="number" class="form-control isRequired" id="cardNumber" value="">
+            <span class="material-input"></span>
+          </div>
+				</div>
+				<div class="col-xs-6 col-sm-6">
+					<div class="monthyearpickered">
+	          <div class="form-group label-floating">
+	            <div class="select-box">
+	              <div class="form-group selectMonth">
+	                <select class="form-control isRequired" id="monthCategory">
+	                  <option disabled="disabled" selected="selected">Select Month</option> 
+	                  <!-- {{#each month in months}}
+	                    <option>{{month.month}}</option>
+	                  {{/each}} -->
+	                  <option value="1">JAN</option>
+	                  <option value="2">FEB</option>
+	                  <option value="3">MAR</option>
+	                  <option value="4">ARP</option>
+	                  <option value="5">MAY</option>
+	                  <option value="6">JUN</option>
+	                  <option value="7">JUL</option>
+	                  <option value="8">AUG</option>
+	                  <option value="9">SEP</option>
+	                  <option value="10">OCT</option>
+	                  <option value="11">NOV</option>
+	                  <option value="12">DEC</option>
+	                </select>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xs-6 col-sm-6">
+		      <div class="monthyearpickered">
+	          <div class="form-group label-floating">
+	            <div class="select-box">
+	              <div class="form-group">
+	                <select class="form-control isRequired" id="yearCategory">
+	                  <option disabled="disabled" selected="selected">Select Year</option> 
+	                  <!-- {{#each year in years}}
+	                    <option>{{year.year}}</option>
+	                  {{/each}} -->	                  
+	                  <option value="2019">2019</option>
+	                  <option value="2020">2020</option>
+	                  <option value="2021">2021</option>
+	                  <option value="2022">2022</option>
+	                  <option value="2023">2023</option>
+	                  <option value="2024">2024</option>
+	                  <option value="2025">2025</option>
+	                  <option value="2026">2026</option>
+	                  <option value="2027">2027</option>
+	                  <option value="2028">2028</option>
+	                  <option value="2029">2029</option>
+	                  <option value="2030">2030</option>
+	                  <option value="2030">2031</option>
+	                  <option value="2030">2032</option>
+	                  <option value="2030">2033</option>
+	                  <option value="2030">2034</option>
+	                </select>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xs-6 col-sm-6">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="CVV" type="text" pattern="[0-9]*" inputmode="numeric" class="form-control isRequired" id="cvvNumber" value="" minlength="3" maxlength="3"> <!-- onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" -->
+            <span class="material-input"></span> 
+          </div>
+				</div>
+				<div class="col-xs-6 col-sm-6">
+					<div class="form-group label-floating is-empty">
+						&nbsp;
+          </div>
+				</div>				
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+						<label style="color: #8c8c8c;">Billing Address</label>
+          </div>
+				</div>
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="Address Line One" type="text" class="form-control isRequired" id="addressLineOne" value="">
+            <span class="material-input"></span>
+          </div>
+				</div>
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="Address Line Two" type="text" class="form-control isRequired" id="addressLineTwo" value="">
+            <span class="material-input"></span>
+          </div>
+				</div>
+				<div class="col-xs-12 col-sm-12">
+					<div class="form-group label-floating is-empty">
+            <input placeholder="City" type="text" class="form-control isRequired" id="billingcity" value="">
+            <span class="material-input"></span>
+          </div>
+				</div>
+				<div class="col-xs-6 col-sm-6">
+					<div class="stateSelect">
+	          <div class="form-group label-floating">
+	            <div class="select-box">
+	              <div class="form-group">
+	              	<input type="text" class="form-control isRequired" name="stateSelectDropDwon" id="stateSelectDropDwon" placeholder="State">
+	                <!-- <select class="form-control isRequired" id="stateSelectDropDwon">
+	                  <option disabled="disabled" selected="selected">State</option> 
+	                  {{#each month in months}}
+	                    <option>{{month.month}}</option>
+	                  {{/each}}
+	                  <option value="MP">MP</option>
+	                  <option value="UP">UP</option>
+	                  <option value="GJ">GJ</option>
+	                  <option value="AP">AP</option>
+	                  <option value="TS">TS</option>
+	                </select> -->
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-xs-6 col-sm-6">
+		      <div class="zipCodeSelect">
+	          <div class="form-group label-floating">
+	            <div class="select-box">
+	              <div class="form-group">
+	              	<input type="number" class="form-control isRequired" name="zipCodeSelectDropDwon" id="zipCodeSelectDropDwon" placeholder="Zip" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;">
+	                <!-- <select class="form-control isRequired" id="zipCodeSelectDropDwon">
+	                  <option disabled="disabled" selected="selected">Zip</option> 
+	                                   
+	                  <option value="451001">451001</option>
+	                  <option value="389525">389525</option>
+	                  <option value="380013">380013</option>
+	                  <option value="545656">545656</option>
+	                  <option value="125411">125411</option>
+	                </select> -->
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+			</div>
+		</div>
+	</div>
+</template>

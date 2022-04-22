@@ -1,0 +1,63 @@
+<template name="createFolder">
+	<div class="transitions-content">
+		<div class="createafolderfilled">
+				<div class="row header">
+					<div class="col-xs-3 text-center">
+			            <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/><div class="cancel">Cancel</div>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="namecase1">
+		                    Create Folder
+		                </div>
+					</div>
+					<div class="col-xs-3 text-right">
+						<button type="button" class="create" id="createFolderButton" disabled="true">
+		                    Create
+		                </button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="rectangle1">
+						<img src="/img/FolderIconBlue.png" class="folder"/>
+						<div class="ryanfileslette">
+		                    <input type="text" name="newFolderName" id="newFolderName" class="newFolderName" placeholder="Folder Name">
+		                    <img src="/img/Close.png" class="emptyButton"/>
+		                </div>
+
+		            </div>
+				</div>
+		</div>
+	</div>
+</template>
+
+<template name="fileRename">
+	<div class="transitions-content">
+		<div class="createafolderfilled fileRename">
+				<div class="row header">
+					<div class="col-xs-3 text-center">
+			            <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/><div class="cancel">Cancel</div>
+					</div>
+					<div class="col-xs-6 text-center">
+						<div class="namecase1">
+		                    Rename
+		                </div>
+					</div>
+					<div class="col-xs-3 text-right">
+						<button type="button" class="create active" id="createFolderButton" disabled="true">
+		                    Save
+		                </button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="rectangle1">
+						<img src="/img/FolderIconBlue.png" class="folder"/>
+						<div class="ryanfileslette">
+		                    <input type="text" name="fileNameText" id="fileNameText" class="fileNameText" placeholder="File Name" value="{{getFileName}}">
+		                    <img src="/img/Close.png" class="emptyButton"/>
+		                </div>
+
+		            </div>
+				</div>
+		</div>
+	</div>
+</template>

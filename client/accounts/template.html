@@ -1,0 +1,161 @@
+<template name="accountsTab">
+	<div class="transitions-content">
+		<div class="account userAccount">
+			<div class="row topHeader">
+				<div class="col-xs-2 text-center">
+					<!-- <div class="backbuttontopnav">
+		                <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/>
+		            </div> -->
+		            &nbsp;
+				</div>
+				<div class="col-xs-8 text-center">
+					<div class="namecase1">
+	                    Account
+	                </div>
+				</div>
+				<div class="col-xs-2 text-right">
+					<!-- <div class="checkedbox">
+	                    <img class="shape1" src="/img/fileslistview-shape@2x.png"/>
+	                </div> -->
+	                <div class="belloringalarmvoicereminder">
+	                    <img class="shape1" src="/img/bell.png"/>
+	                </div>
+				</div>
+			</div>
+			<div class="accountRows">
+				<div class="row">
+					<div class="col-xs-12 nopadding">
+						<div class="rectangle14" id="editProfile" style="padding-left: 10px;padding-top: 10px;">
+							<div class="frederickwillis">
+				                {{getLoggedInUserDetails.profile.fullName}}
+				            </div>
+				            {{#if getLoggedInUserDetails.profile.jobTitle}}
+					            <div class="lawyeranddivorces">
+					                {{getLoggedInUserDetails.profile.jobTitle}}
+					            </div>
+					        {{else}}
+					        	<div class="lawyeranddivorces">
+					                &nbsp;
+					            </div>
+				            {{/if}}
+				            <img  class="shape toptexticon" src="/img/IdCardIcon.png"/>
+	            		</div>
+	            		<div class="rectangle14 first">
+	            			<div class="item gotoPayment">
+		            			<div class="payment">
+					                Payment
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/CardIcon.png"  style="margin-top: 7px;"/>
+					        	</div>
+				        	</div>
+				        	<hr>
+				        	<div class="item" id="resetPasswordItem">
+		            			<div class="payment">
+					                Change Password
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/KeyIcon.png"/>
+					        	</div>
+				        	</div>
+				        	<hr>
+				        	<div class="item" id="notificatinSettings">
+		            			<div class="payment">
+					                Notification Settings
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/BellIcons.png"/>
+					            </div>
+				        	</div>
+				        	<hr>
+				        	<div class="item" id="upgradeStorage">
+		            			<div class="payment">
+					                Upgrade Storage
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/BadgeIcon.png"/>
+					            </div>
+				        	</div>
+	            		</div>
+
+	            		<div class="rectangle14">
+	            			<!-- <div class="item">
+		            			<div class="payment">
+					                App Connect
+					            </div>
+					            <img  class="creditdebitcardonlinetransactionpayment" src="/img/ShareIcon.png"/>
+				        	</div>
+				        	<hr> -->
+				        	<div class="item addNewCollaborator">
+		            			<div class="payment">
+					                Collaborators
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/AddUserIcon.png"/>
+					            </div>
+				        	</div>
+				        	<hr>
+				        	{{#if isCordova}}
+				        	<div class="item" id="shareApp">
+		            			<div class="payment">
+					                Share App
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/Share1Icon.png"/>
+					            </div>
+				        	</div>
+				        	<hr>
+				        	{{/if}}
+				        	<div class="item" id="emailSupportDiv">
+		            			<div class="payment">
+					                Email Support
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/EmailIcon.png" style="margin-top: 7px;" />
+					            </div>
+				        	</div>
+	            		</div>
+
+	            		<div class="rectangle14">
+	            			<div class="item termsAndConditions">
+		            			<div class="payment">
+					                Terms of Use
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/TermIcon.png"/>
+					            </div>
+				        	</div>
+				        	<hr>
+				        	<div class="item privacyPolicyPoP">
+		            			<div class="payment">
+					                Privacy Policy
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/PrivacyIcon.png"/>
+					            </div>
+				        	</div>
+	            		</div>
+
+	            		<div class="rectangle14" id="logoutItem">
+				        	<div class="item">
+		            			<div class="payment">
+					                Sign Out
+					            </div>
+					            <div class="rightIconAccount">
+					            	<img  class="creditdebitcardonlinetransactionpayment" src="/img/LogOutIcon.png"/>
+					            </div>
+				        	</div>
+	            		</div>
+	            		
+						<div id="payment-request-button">
+						  <!-- A Stripe Element will be inserted here. -->
+						</div>
+					</div>
+				</div>
+			</div> 
+			{{> tabs}}
+			{{> privacyPolicy}}
+			{{> termsConditions}}
+		</div>
+	</div>
+</template>

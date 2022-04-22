@@ -1,0 +1,47 @@
+<head>
+  <title>Recite</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+  <script src="/js/functions.js"></script>
+  <script src="/js/jquery-1.12.4.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+
+  <link href="/css/select2.min.css" rel="stylesheet" />
+  <script src="/js/select2.full.min.js"></script>
+
+  <script src="/js/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <script type="text/javascript" src="/js/download.js"></script>
+  <script type="text/javascript" src="/js/jszip.js"></script>
+  <script type="text/javascript" src="/js/jszip-utils.js"></script>
+  <script type="text/javascript" src="/js/jquery-confirm.js"></script>
+
+  <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+  
+
+
+
+  
+</head>
+
+<body>
+  {{> createOverlay}}
+  {{> waitingOverlay}}
+  {{> fileControlOverlay}}
+  {{> folderControlOverlay}}
+  {{> filterOptionsOverlay}}
+  {{> tagOverlay}}
+  {{> sendItemOverlay}}
+  {{> selectFileOverlay}}
+  {{> multipleSelectFileOptionsOverlay}}
+  {{> imageViewer}}
+  {{> notificationOverlay}}
+</body>
+
+<template name="layout">
+  <div class="transitions-container" style="height:100%;">
+    {{> yield}}
+  </div>
+</template>

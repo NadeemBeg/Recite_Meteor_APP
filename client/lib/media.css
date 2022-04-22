@@ -1,0 +1,43 @@
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+    .multipleSelectFileOptionsOverlay .rightText {
+	    font-size: 25px;
+	    float: left;
+	}
+	.multipleSelectFileOptionsOverlay img.leftIcon {
+	    height: 30px;
+	    width: auto;
+	    margin-right: 20px;
+	    float: left;
+	}
+	.multipleSelectFileOptionsOverlay .rowItem {
+	    padding: 10px;
+	    height: 100px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	/* ipad pro */
+	.multipleSelectFileOptionsOverlay .rightText {
+	    font-size: 30px;
+	    float: left;
+	}
+	.multipleSelectFileOptionsOverlay img.leftIcon {
+	    height: 40px;
+	    width: auto;
+	    margin-right: 20px;
+	    float: left;
+	}
+	.multipleSelectFileOptionsOverlay .rowItem {
+	    padding: 10px;
+	    height: 100px;
+	}
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+    .multipleSelectFileOptionsOverlay .rightText {
+	    font-size: 14px;
+	    float: left;
+	}
+}

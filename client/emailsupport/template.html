@@ -1,0 +1,69 @@
+<template name="emailSupport">
+	<div class="transitions-content">
+		<div class="emailsupport">
+			<div class="row topHeader">
+				<div class="col-xs-3 col-sm-2 text-center">
+					<div class="backbuttontopnav">
+						&nbsp;
+		                <!-- <img class="arrowright336" src="/img/verify-account-part-2-arrowright-336@2x.png"/> -->
+		            </div>
+				</div>
+				<div class="col-xs-6 col-sm-8 text-center">
+					<div class="namecase1">
+	                    Email Support
+	                </div>
+				</div>
+				<div class="col-xs-3 col-sm-2 text-right">
+					<button class="blueButton margintop20 emailSupportCancel" >Cancel</button>
+				</div>
+			</div>
+			<div class="row middleContent">
+				<div class="col-xs-12 nopadding">
+					<div class="row bottomBorder">
+						<div class="col-xs-2">
+							<label class="emailSupportToLabel">To:</label>
+						</div>
+						<div class="col-xs-8">
+							<input type="text" name="toTextBox" id="toTextBox"  class="emailSupportTextBox">
+						</div>
+						<div class="col-xs-2 text-right">
+							<!-- <img src="/img/PlusIconEmail.png" class="emailSupportAddEmailImage" id="addMoreEmail"/> -->
+							&nbsp;
+						</div>
+					</div>
+					
+					<div class="row bottomBorder">
+						<div class="col-xs-2">
+							<label class="emailSupportToLabel">CC/BCC:</label>
+						</div>
+						<div class="col-xs-10">
+							<input type="text" name="ccbcc" id="ccbcc"  class="emailSupportTextBox">
+						</div>
+					</div>
+
+					<div class="row bottomBorder">
+						<div class="col-xs-2">
+							<label class="emailSupportToLabel">Subject:</label>
+						</div>
+						<div class="col-xs-10">
+							<input type="text" name="subject" id="subject"  class="emailSupportTextBox">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<textarea class="emailSupportTextarea" id="emailBody" name="emailBody" placeholder="Type in here."></textarea>
+							<div id="output_div" style="display: none;"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<button class="emailSupportShareButton" id="emailSupportSendButton">Share</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

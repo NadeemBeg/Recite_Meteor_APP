@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "988979084578",
+    "firebase_url": "https://recite-13725.firebaseio.com",
+    "project_id": "recite-13725",
+    "storage_bucket": "recite-13725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988979084578:android:90f47ef053eaabee",
+        "android_client_info": {
+          "package_name": "com.reciteapp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988979084578-m644kabm7lo2v4v4h539qhhjh4ebparl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUsAc94FIA4T3hkUacK09yV3CeG7tipSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988979084578-m644kabm7lo2v4v4h539qhhjh4ebparl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
